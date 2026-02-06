@@ -1,18 +1,30 @@
-
 import './App.css'
 import { useState, useEffect } from 'react';
 
 function App() {
-
   const phrases = ["Scalable Architecture", "Intuitive Design", "Responsive Layouts"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+
+    const timer = setTimeout(() => {
+    const loader = document.getElementById('preloader-global');
+    if (loader) {
+      loader.style.display = 'none';
+    }
+  }, 500); // 1 segundo es suficiente
+
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % phrases.length);
     }, 3500);
-    return () => clearInterval(interval); // Limpieza al desmontar
+
+    return () => {
+      clearTimeout(timer); // Limpieza del timeout
+      clearInterval(interval); // Limpieza al desmontar
+    };
   }, []);
+
+
   return (
       <div className="grid-container">
         
