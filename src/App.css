@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  /* --color-zen-charcoal: #121212;
+  --color-zen-gray: #1e1e1e;
+  --color-zen-silver: #a1a1a1;
+  --color-zen-pearl: #f0f0f0;
+  --color-zen-lavender: #e0e0f8;
+  --color-zen-gradient-start: #333333;
+  --color-zen-gradient-end: #111111;
+  --color-zen-mist: rgba(255, 255, 255, 0.03);
+  --color-zen-border: rgba(255, 255, 255, 0.08); */
+/* Fondo principal: Un negro azulado muy profundo para que el rosa destaque */
+  --color-pinky-main: #0d0f14;
+  
+  /* Fondo secundario: Para tarjetas o secciones que necesitan separarse */
+  --color-pinky-card: #161a22;
+
+  /* Color de texto principal: Un blanco roto para que no canse la vista */
+  --color-pinky-base: #e2e8f0;
+
+  /* Color de texto secundario: Para descripciones o info menos importante */
+  --color-pinky-muted: #94a3b8;
+
+  /* EL PROTAGONISTA: Rosa pastel femenino, suave pero legible en fondos oscuros */
+  --color-pinky-pink: #fbcfe8;
+
+  /* Rosa de apoyo: Para efectos de hover o bordes sutiles */
+  --color-pinky-soft: #f472b6;
+  --color-pinky-border-pink: rgba(251, 207, 232, 0.05);
+  --color-pinky-border-hover: rgba(99, 34, 67, 0.253);
+  --shadow-pinky-glow: 0 0 20px -5px rgba(251, 207, 232, 0.15);
+  --shadow-pinky-strong: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(251, 207, 232, 0.05);
+
+  @keyframes fade-slide {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    via{
+      opacity: 1;
+      transform: translateY(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  --animate-fade-slide: fade-slide 0.7s ease-out;
+}
+
+#root {
+  max-width: 1920px;
+  max-height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @apply py-5 flex items-center justify-center  
+}
+
+.grid-container {
+ @apply grid grid-cols-12 grid-rows-9 gap-4 lg:w-[80vw] lg:h-[95vh] p-3
+}
+
+.grid-container > div {
+  @apply  border-2 border-pinky-border-pink
+  text-pinky-base bg-pinky-card rounded-lg
+  hover:border-pinky-soft transition-all duration-300
+  hover:shadow-pinky-glow
+  bg-clip-padding
+}
+#colorfull-text {
+  @apply inline-block animate-fade-slide 
+  bg-linear-to-r from-pinky-pink to-pinky-soft bg-clip-text text-transparent 
+  font-extrabold text-6xl
+  max-h-20 min-h-20 
+  
+}
+
+.grid-container .mod-1 {
+ @apply col-span-8 row-span-5  
+
+ bg-linear-to-tr from-pinky-main from-60% to-pinky-soft/20
+ 
+ p-10 flex flex-col justify-center
+}
+  .mod-1 h3 {
+    @apply text-2xl text-pinky-muted font-semibold font-[Arial]
+  }
+  .mod-1 h1 {
+    @apply text-5xl text-pinky-base font-[Arial] pt-3
+  }
+
+.grid-container .mod-2 {
+ @apply col-span-4 row-span-4 col-start-9 row-start-1
+}
+.grid-container .mod-3 {
+ @apply col-span-2 row-span-2 col-start-1 row-start-6
+}
+.grid-container .mod-4 {
+ @apply col-span-2 row-span-2 col-start-1 row-start-8
+}
+.grid-container .mod-5 {
+ @apply col-span-4 row-span-4 col-start-3 row-start-6
+}
+.grid-container .mod-6 {
+ @apply col-span-2 col-start-7 row-start-6
+}
+.grid-container .mod-7 {
+ @apply col-span-2 row-span-2 col-start-9 row-start-5
+   flex flex-col justify-center items-center gap-1.5
+   bg-pinky-main/50
+}
+.grid-container .mod-7 p {
+  @apply text-xs text-pinky-muted font-bold text-center max-w-30
+}
+#experience-years {
+  @apply text-6xl text-pinky-soft/95 font-extrabold font-mono
+}
+
+.grid-container .mod-8 {
+ @apply col-span-2 row-span-3 col-start-11 row-start-5
+}
+.grid-container .mod-9 {
+  @apply col-span-4 row-span-3 col-start-7 row-start-7
+}
+.grid-container .mod-10 {
+  @apply col-span-2 row-span-2 col-start-11 row-start-8
+}
