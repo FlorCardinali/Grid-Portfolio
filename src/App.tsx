@@ -38,6 +38,7 @@ function App() {
         {/* MODULO 2 */}
         <div className="mod-2">
           <h3>About Me</h3>
+          <p></p>
         </div>
         {/* MODULO 3 */}
         <div className="mod-3">3</div>
