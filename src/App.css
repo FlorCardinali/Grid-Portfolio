@@ -6,7 +6,7 @@
   --color-pinky-card: #161a22;
   --color-pinky-base: #e2e8f0;
   --color-pinky-muted: #94a3b8;
-  --color-pinky-pink: #fbcfe8;
+  --color-pinky-pink: #ecb5d4;
   --color-pinky-soft: #f472b6;
   --color-pinky-border-pink: rgba(251, 207, 232, 0.05);
   --color-pinky-border-hover: rgba(99, 34, 67, 0.253);
@@ -132,6 +132,7 @@
 }
 .grid-container .mod-6 {
  @apply col-span-2 col-start-7 row-start-6
+ bg-pinky-border-hover
 }
 .grid-container .mod-7 {
  @apply col-span-2 row-span-2 col-start-9 row-start-5

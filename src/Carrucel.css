@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import "./App.css";
+
+
+.carousel-container {
+  /* Mantiene las esquinas redondeadas del módulo */
+  @apply relative w-full h-full overflow-hidden rounded-lg bg-pinky-card;
+}
+
+.carousel-track {
+  @apply flex h-full w-full transition-transform duration-700 ease-in-out;
+}
+
+.carousel-slide {
+  /* Cada slide es relativa para poder posicionar cosas adentro */
+  @apply min-w-full h-full relative flex items-end justify-start;
+}
+
+/* 1. La Imagen */
+.slide-image {
+  @apply absolute inset-0 w-full h-full object-cover object-top-left z-0;
+}
+
+
+.slide-overlay {
+  /* Va de transparente arriba a negro/rosa oscuro abajo */
+  @apply absolute inset-0 bg-linear-to-t from-black from-30% to-pinky-main/30 z-10;
+}
+
+/* 3. El Texto */
+.slide-content {
+  @apply relative z-20 p-6 w-full max-h-30 min-h-30 flex flex-col gap-1;
+}
+
+.slide-content h3 {
+  /* Título grande y rosa */
+  @apply text-2xl font-bold text-pinky-pink drop-shadow-md;
+}
+
+.slide-content p {
+  /* Descripción legible */
+  @apply text-pinky-base text-sm font-medium max-w-[90%] drop-shadow-sm;
+}
+
+/* --- Indicadores (Puntitos) --- */
+.carousel-indicators {
+  /* Los subimos un poco para que queden sobre el texto */
+  @apply absolute bottom-6 right-6 flex gap-2 z-30;
+}
+
+.indicator-dot {
+  @apply w-2 h-2 rounded-full bg-white/30 backdrop-blur-sm transition-all duration-300 border border-white/10;
+}
+
+.indicator-dot.active {
+  @apply bg-pinky-pink w-6 shadow-[0_0_8px_rgba(251,207,232,0.8)];
+}

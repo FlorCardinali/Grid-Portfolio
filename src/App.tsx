@@ -1,4 +1,6 @@
 import './App.css'
+import Clock from './Clock.js';
+import Carousel from './Carousel.js';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -47,9 +49,13 @@ function App() {
         {/*  MODULO 4 */}
         <div className="mod-4">4</div>
         {/*  MODULO 5 */}
-        <div className="mod-5">5</div>
+        <div className="mod-5">
+          <Carousel />
+        </div>
         {/*  MODULO 6 */}
-        <div className="mod-6">6</div>
+        <div className="mod-6">
+          <Clock />
+        </div>
         {/*  MODULO 7  */}
         <div className="mod-7">
         <h4 id='experience-years'>+3</h4>
