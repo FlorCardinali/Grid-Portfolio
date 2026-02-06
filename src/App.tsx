@@ -12,7 +12,7 @@ function App() {
     if (loader) {
       loader.style.display = 'none';
     }
-  }, 500); // 1 segundo es suficiente
+  }, 300); // 1 segundo es suficiente
 
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % phrases.length);
@@ -36,7 +36,9 @@ function App() {
           </h1>
         </div>
         {/* MODULO 2 */}
-        <div className="mod-2">2</div>
+        <div className="mod-2">
+          <h3>About Me</h3>
+        </div>
         {/* MODULO 3 */}
         <div className="mod-3">3</div>
         {/*  MODULO 4 */}
