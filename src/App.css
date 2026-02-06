@@ -78,7 +78,7 @@
 .grid-container .mod-2 {
  @apply col-span-4 row-span-4 col-start-9 row-start-1
 
- bg-[url(/beautiful-pink-peach-tree-blossom.jpg)] bg-cover bg-top bg-no-repeat 
+ bg-[url(/beautiful-pink-peach-tree-blossom.webp)] bg-cover bg-top bg-no-repeat 
   rounded-xl
  relative flex items-end p-5 after:content-[''] after:absolute after:inset-0
  after:bg-linear-to-t after:from-pinky-main after:to-80% after:to-transparent  after:rounded-lg
