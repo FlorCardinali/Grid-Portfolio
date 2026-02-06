@@ -1,51 +1,72 @@
 @import "tailwindcss";
 @import "./App.css";
 
-
 .carousel-container {
-  /* Mantiene las esquinas redondeadas del módulo */
-  @apply relative w-full h-full overflow-hidden rounded-lg bg-pinky-card;
+  @apply relative w-full h-full overflow-hidden rounded-lg bg-pinky-card cursor-pointer;
+
+  /* --- ESTILOS DEL TÍTULO "PROJECTS" --- */
+  & .projects-hover-title {
+    @apply absolute inset-0 z-50 flex items-center justify-center
+           text-4xl font-extrabold text-pinky-pink tracking-widest uppercase
+           opacity-0 transition-all duration-300 ease-out
+           translate-y-4; /* Empieza un poquito abajo para subir al aparecer */
+    
+    /* Efecto de texto con borde brillante (opcional) */
+    text-shadow: 0 0 20px var(--color-pinky-soft);
+  }
+
+  /* --- LÓGICA DEL HOVER --- */
+  &:hover {
+    /* 1. Aparece el título */
+    & .projects-hover-title {
+      @apply opacity-100 translate-y-0;
+    }
+
+    /* 2. El carrusel se oscurece y se desenfoca */
+    & .carousel-track {
+      @apply opacity-20 blur-[2px] scale-105; /* scale para efecto de "respiro" */
+    }
+
+    /* 3. Ocultamos los puntitos e info para limpiar la vista */
+    & .carousel-indicators, 
+    & .slide-content {
+      @apply opacity-0 transition-opacity duration-300;
+    }
+  }
 }
 
+/* --- RESTO DE TU CSS (Con pequeños ajustes) --- */
+
 .carousel-track {
-  @apply flex h-full w-full transition-transform duration-700 ease-in-out;
+  @apply flex h-full w-full transition-all duration-500 ease-in-out; /* Cambié transform por all para el blur */
 }
 
 .carousel-slide {
-  /* Cada slide es relativa para poder posicionar cosas adentro */
   @apply min-w-full h-full relative flex items-end justify-start;
 }
 
-/* 1. La Imagen */
 .slide-image {
   @apply absolute inset-0 w-full h-full object-cover object-top-left z-0;
 }
 
-
 .slide-overlay {
-  /* Va de transparente arriba a negro/rosa oscuro abajo */
   @apply absolute inset-0 bg-linear-to-t from-black from-30% to-pinky-main/30 z-10;
 }
 
-/* 3. El Texto */
 .slide-content {
-  @apply relative z-20 p-6 w-full max-h-30 min-h-30 flex flex-col gap-1;
+  @apply z-20 px-6 w-full max-h-30 min-h-30 flex flex-col justify-center gap-1 transition-opacity duration-300;
 }
 
 .slide-content h3 {
-  /* Título grande y rosa */
-  @apply text-2xl font-bold text-pinky-pink drop-shadow-md;
+  @apply block text-2xl font-bold text-pinky-pink drop-shadow-md bottom-18;
 }
 
 .slide-content p {
-  /* Descripción legible */
-  @apply text-pinky-base text-sm font-medium max-w-[90%] drop-shadow-sm;
+  @apply text-pinky-base text-sm font-medium max-w-[90%] drop-shadow-sm top-3;
 }
 
-/* --- Indicadores (Puntitos) --- */
 .carousel-indicators {
-  /* Los subimos un poco para que queden sobre el texto */
-  @apply absolute bottom-6 right-6 flex gap-2 z-30;
+  @apply absolute bottom-6 right-6 flex gap-2 z-30 transition-opacity duration-300;
 }
 
 .indicator-dot {

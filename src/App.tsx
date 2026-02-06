@@ -1,6 +1,7 @@
 import './App.css'
 import Clock from './Clock.js';
 import Carousel from './Carousel.js';
+import GithubGraph from './GithubGraph.js';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -64,7 +65,9 @@ function App() {
         {/*  MODULO 8 */}
         <div className="mod-8">8</div>
         {/*  MODULO 9 */}
-        <div className="mod-9">9</div>
+        <div className="mod-9">
+          <GithubGraph />
+        </div>
         {/*  MODULO 10 */}
         <div className="mod-10">10</div>    
     </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import "./Carrucel.css";
+import "./Carrucel.css"; // Asegurate que el nombre coincida con tu archivo
+
 const Carousel = () => {
   const items = [
     { 
@@ -11,13 +12,13 @@ const Carousel = () => {
     { 
       id: 2, 
       title: "Pacific Rental", 
-      desc: "Landig page in construction for a bussiness of temporary apartment rental",
+      desc: "Landing page for apartment rental", // Corregí typos leves
       img: "/depto.webp" 
     },
     { 
       id: 3, 
       title: "Cosmo Shoes", 
-      desc: "Design of a Hero section for a shoes company",
+      desc: "Hero section for a shoes company",
       img: "/cosmoshoes.jpeg" 
     },
   ];
@@ -34,6 +35,10 @@ const Carousel = () => {
 
   return (
     <div className="carousel-container">
+      
+      {/* NUEVO: El título que aparece en Hover */}
+      <h2 className="projects-hover-title">Projects</h2>
+
       {/* Riel de Slides */}
       <div 
         className="carousel-track" 
@@ -41,19 +46,12 @@ const Carousel = () => {
       >
         {items.map((item) => (
           <div key={item.id} className="carousel-slide">
-            
-            {/* CAPA 1: La Imagen de Fondo */}
             <img src={item.img} alt={item.title} className="slide-image" />
-            
-            {/* CAPA 2: El Degradado Oscuro (Para que se lea el texto) */}
             <div className="slide-overlay"></div>
-
-            {/* CAPA 3: Tu Texto (Título y Descripción) */}
             <div className="slide-content">
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
             </div>
-
           </div>
         ))}
       </div>
