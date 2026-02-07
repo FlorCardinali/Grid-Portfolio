@@ -9,9 +9,10 @@ const Modulo_seis = () => {
     }, []);
 
     const timeString = date.toLocaleTimeString("es-AR", {
+        timeZone: "America/Argentina/Buenos_Aires",
         hour: "2-digit",
         minute: "2-digit",
-        hour12: false, // Formato 24hs (más técnico)
+        hour12: false, 
     });
 
 
@@ -19,7 +20,8 @@ const Modulo_seis = () => {
     return (  
          <div className="mod-6 ">  
             <div className="clock-content">
-                <h2 className="clock-time">{timeString} <span className="text-clock">ARG</span></h2>
+                <h2 className="clock-time">{timeString} </h2>
+                <span className="text-clock">ARG</span>
             </div>     
         </div>
     );

@@ -11,9 +11,9 @@
     row-span-2
 /* tablet 12x12 */
     md:col-start-1
-    md:row-start-10
+    md:row-start-11
     md:col-span-8
-    md:row-span-3
+    md:row-span-2
  /* pc 9x12 */
     lg:col-start-9
     lg:row-start-5
@@ -27,7 +27,7 @@
 }
 
 .mod-3 h3 {
-    @apply  text-center font-extrabold text-pinky-pink tracking-widest uppercase md:text-3xl text-xl relative z-10;
+    @apply  text-center font-extrabold text-pinky-pink tracking-widest uppercase md:text-2xl text-xl relative z-10;
     
 }
 

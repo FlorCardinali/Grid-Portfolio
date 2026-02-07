@@ -21,8 +21,8 @@
     lg:row-span-2  
 }
 .grid-container .mod-7 p {
-  @apply text-xs text-pinky-muted font-bold text-center max-w-30
+  @apply text-xs text-pinky-muted font-bold text-center max-w-[80%]
 }
 #experience-years {
-  @apply lg:text-6xl md:text-4xl text-4xl text-pinky-soft/95 font-extrabold font-mono
+  @apply lg:text-5xl md:text-4xl text-4xl text-pinky-soft/95 font-extrabold font-mono
 }

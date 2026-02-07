@@ -22,17 +22,17 @@
 }
 
 .clock-content {
-  @apply flex flex-col items-center justify-center text-center;
+  @apply flex flex-wrap items-end justify-center gap-x-2 text-center p-1;
 }
 
 .mod-6 .clock-time {
     @apply font-mono font-bold text-pinky-pink 
     drop-shadow-[0_0_10px_rgba(251,207,232,0.3)] leading-none
     text-3xl
-    md:text-2xl
-    lg:text-4xl
+    md:text-xl
+    lg:text-3xl
 }
 .text-clock {
   @apply  text-pinky-muted
-  text-lg
+  lg:text-lg text-sm font-mono
 }
