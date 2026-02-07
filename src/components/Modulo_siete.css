@@ -24,5 +24,5 @@
   @apply text-xs text-pinky-muted font-bold text-center max-w-30
 }
 #experience-years {
-  @apply text-6xl text-pinky-soft/95 font-extrabold font-mono
+  @apply lg:text-6xl md:text-4xl text-4xl text-pinky-soft/95 font-extrabold font-mono
 }
