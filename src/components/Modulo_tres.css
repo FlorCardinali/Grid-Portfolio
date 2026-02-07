@@ -2,21 +2,90 @@
 @import "tailwindcss";
 
 .grid-container .mod-3 {
- @apply 
+ @apply flex items-center justify-center relative overflow-hidden 
 
  /* celu 3x12 */
     col-start-1 
     row-start-11 
-    col-span-1 
-    row-span-1
+    col-span-2 
+    row-span-2
 /* tablet 12x12 */
     md:col-start-1
     md:row-start-10
-    md:col-span-4
+    md:col-span-8
     md:row-span-3
  /* pc 9x12 */
-    lg:col-start-1
-    lg:row-start-6
-    lg:col-span-2
-    lg:row-span-2  
+    lg:col-start-9
+    lg:row-start-5
+    lg:col-span-4
+    lg:row-span-2
+    ;
+
+    &:hover h3 {
+        text-shadow: 0 0 20px var(--color-pinky-soft);
+    }
+}
+
+.mod-3 h3 {
+    @apply  text-center font-extrabold text-pinky-pink tracking-widest uppercase md:text-3xl text-xl relative z-10;
+    
+}
+
+.liquid-wave {
+  @apply absolute opacity-40 rounded-[40%] transition-colors duration-500 ease-in-out;
+  width: 170%;
+  height: 100%;
+  left: -50%;
+  top: 0%;
+  border-radius: 40% 50% 40% 50%; 
+
+  /* EN PC: Vuelven a ser gigantes */
+  /* @media (min-width: 768px) {
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    top: -50%;
+    border-radius: 45%;
+  } */
+}
+
+/* --- ONDA 1 (Fondo) --- */
+.wave-1 {
+  @apply bg-black;
+  animation: var(--animate-spin-slow); 
+  animation-duration: 15s;
+  scale: 1.5;
+  border-radius: 30% 55% 70% 60% / 55% 40% 60% 45%; 
+}
+
+/* HOVER: Cuando toco .mod-3, cambio .wave-1 */
+.mod-3:hover .wave-1 {
+  @apply bg-pinky-pink/20;
+}
+
+/* --- ONDA 2 (Medio) --- */
+.wave-2 {
+  @apply bg-pinky-main/90;
+  animation: var(--animate-spin-slow);
+  animation-duration: 10s;
+  animation-direction: reverse;
+  border-radius: 55% 45% 60% 40% / 40% 60% 45% 55%;
+}
+
+/* HOVER: Cuando toco .mod-3, cambio .wave-2 */
+.mod-3:hover .wave-2 {
+  @apply bg-pinky-main/50;
+}
+
+/* --- ONDA 3 (Frente) --- */
+.wave-3 {
+  @apply bg-pinky-border-pink;
+  animation: var(--animate-spin-slow);
+  animation-duration: 7s;
+  border-radius: 35% 65% 35% 65% / 65% 35% 65% 35%;
+  opacity: 0.3;
+}
+
+.mod-3:hover .wave-3 {
+  @apply bg-pinky-soft/30;
 }

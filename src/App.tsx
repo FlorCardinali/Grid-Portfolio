@@ -7,7 +7,6 @@ import Modulo_cuatro from './components/Modulo_cuatro.js';
 import Modulo_cinco from './components/Modulo_cinco.js';
 import Modulo_seis from './components/Modulo_seis.js';
 import Modulo_siete from './components/Modulo_siete.js';
-import Modulo_nueve from './components/Modulo_nueve.js';
 import Modulo_ocho from './components/Modulo_ocho.js';
 
 
@@ -39,7 +38,6 @@ function App() {
         <Modulo_cinco />
         <Modulo_seis />
         <Modulo_siete />
-        <Modulo_nueve />
         <Modulo_ocho />
          
     </div>

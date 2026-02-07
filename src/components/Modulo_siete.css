@@ -15,10 +15,10 @@
     md:col-span-4
     md:row-span-2
  /* pc 9x12 */
-    lg:col-start-9
-    lg:row-start-5
+    lg:col-start-1
+    lg:row-start-6
     lg:col-span-2
-    lg:row-span-2
+    lg:row-span-2  
 }
 .grid-container .mod-7 p {
   @apply text-xs text-pinky-muted font-bold text-center max-w-30

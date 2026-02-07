@@ -5,12 +5,12 @@
  @apply 
  
   /* celu 3x12 */
-    col-start-2
+    col-start-3
     row-start-11
     col-span-1 
-    row-span-1 
+    row-span-2 
  /* tablet 12x12 */ 
-    md:col-start-5
+    md:col-start-9
     md:row-start-10
     md:col-span-4
     md:row-span-3

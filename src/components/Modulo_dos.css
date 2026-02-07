@@ -28,7 +28,7 @@
   &::after {
     content: '';
     @apply absolute inset-0 rounded-lg transition-all duration-500 ease-in-out
-    bg-linear-to-t from-pinky-main  to-transparent to-50%;
+    bg-linear-to-t from-pinky-main  to-transparent ;
   }
   &:hover::after {
     @apply to-90% to-pinky-main/70;

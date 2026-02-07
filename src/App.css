@@ -26,6 +26,13 @@
     }
   }
   --animate-fade-slide: fade-slide 0.7s ease-out;
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  --animate-spin-slow: spin-slow 10s linear infinite;
 }
 
 #root {
@@ -49,7 +56,7 @@
   lg:w-[80vw] lg:h-[95vh];
 }
 
-.grid-container > div {
+.grid-container > * {
   @apply  border-2 border-pinky-border-pink
   text-pinky-base bg-pinky-card bg-clip-padding rounded-lg
   /* hover */
