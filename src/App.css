@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -27,132 +26,33 @@
     }
   }
   --animate-fade-slide: fade-slide 0.7s ease-out;
-  --font-oswald: "Oswald", sans-serif; 
 }
 
 #root {
-  max-width: 1920px;
-  max-height: 100vh;
-  margin: 0 auto;
   box-sizing: border-box;
   background-color: #0d0f14 !important; 
-  @apply py-5 flex items-center justify-center  
+  @apply md:py-5 flex items-center justify-center
+  md:max-h-screen  md:max-w-480 max-w-[97vw]
 }
 
 .grid-container {
-  @apply grid grid-cols-12 grid-rows-9 gap-4 lg:w-[80vw] lg:h-[95vh] p-3
+  @apply grid p-3 gap-3 
+/* celu 3x12 */
+  grid-cols-3 
+  grid-rows-12  
+/* tablet 12x12 */
+  md:grid-cols-12 
+  md:grid-rows-12 
+  md:w-[90vw] md:h-[90vh]
+/* pc 9x12 */
+  lg:grid-rows-9 
+  lg:w-[80vw] lg:h-[95vh];
 }
 
 .grid-container > div {
-  @apply  
-  border-2
-  border-pinky-border-pink
-  text-pinky-base 
-  bg-pinky-card 
-  rounded-lg
+  @apply  border-2 border-pinky-border-pink
+  text-pinky-base bg-pinky-card bg-clip-padding rounded-lg
+  /* hover */
   hover:border-pinky-soft 
   hover:shadow-pinky-glow
-  bg-clip-padding
-}
-#colorfull-text {
-  @apply inline-block animate-fade-slide 
-  bg-linear-to-r from-pinky-pink to-pinky-soft bg-clip-text text-transparent 
-  font-extrabold text-6xl
-  max-h-20 min-h-20 
-  
-}
-  
-.grid-container .mod-1 {
- @apply col-span-8 row-span-5  
-
- bg-linear-to-tr from-pinky-main from-60% to-pinky-soft/20
- 
- p-10 flex flex-col justify-center
-}
-  .mod-1 h3 {
-    @apply text-2xl text-pinky-muted font-semibold font-[Arial]
-  }
-  .mod-1 h1 {
-    @apply text-5xl text-pinky-base font-[Arial] pt-3
-  }
-
-.grid-container .mod-2 {
-
-  @apply col-span-4 row-span-4 col-start-9 row-start-1
-  bg-[url(/beautiful-pink-peach-tree-blossom.webp)] bg-cover bg-top bg-no-repeat 
-  rounded-xl
-  relative flex flex-col justify-end p-5 overflow-hidden;
-
-  &::after {
-    content: '';
-    @apply absolute inset-0 rounded-lg transition-all duration-500 ease-in-out
-    bg-linear-to-t from-pinky-main  to-transparent to-50%;
-  }
-  &:hover::after {
-    @apply to-90% to-pinky-main/70;
-  }
-
-  &:hover {
-    @apply justify-center items-center;
-  }
-}
-.mod-2 h3 {
-  @apply text-4xl text-pinky-pink font-bold font-[Arial] z-10 
-  transition-transform duration-500 ease-out;
-}
-.mod-2:hover h3 {
-  @apply -translate-y-100 opacity-0;
-}
-.mod-2 p {
-  @apply text-pinky-base font-[Verdana] z-10 text-[16px]
-  opacity-0 translate-y-20 absolute max-w-4/5
-  transition-all duration-500 delay-100 ease-out;
-}
-.mod-2:hover p {
-  @apply opacity-100 translate-y-0;
-}
-.mod-2 p span {
-  @apply text-pinky-soft font-semibold;
-}
-
-.grid-container .mod-3 {
- @apply col-span-2 row-span-2 col-start-1 row-start-6
-}
-
-.grid-container .mod-4 {
- @apply col-span-2 row-span-2 col-start-1 row-start-8
-}
-
-.grid-container .mod-5 {
- @apply col-span-4 row-span-4 col-start-3 row-start-6 relative;
-}
-
-
-.grid-container .mod-6 {
- @apply col-span-2 col-start-7 row-start-6
- bg-pinky-border-hover
-}
-.grid-container .mod-7 {
- @apply col-span-2 row-span-2 col-start-9 row-start-5
-   flex flex-col justify-center items-center gap-1.5
-   bg-linear-to-bl from-pinky-main from-5% via-25% to-45% via-pinky-card to-pinky-main
-}
-.grid-container .mod-7 p {
-  @apply text-xs text-pinky-muted font-bold text-center max-w-30
-}
-#experience-years {
-  @apply text-6xl text-pinky-soft/95 font-extrabold font-mono
-}
-
-.grid-container .mod-8 {
- @apply col-span-2 row-span-3 col-start-11 row-start-5
-}
-
-.grid-container .mod-9 {
-  @apply col-span-4 row-span-3 col-start-7 row-start-7
-  bg-pinky-pink/5
-}
-
-.grid-container .mod-10 {
-  @apply col-span-2 row-span-2 col-start-11 row-start-8
 }

@@ -1,0 +1,23 @@
+@import "../App.css";
+@import "tailwindcss";
+
+.grid-container .mod-4 {
+ @apply 
+ 
+  /* celu 3x12 */
+    col-start-2
+    row-start-11
+    col-span-1 
+    row-span-1 
+ /* tablet 12x12 */ 
+    md:col-start-5
+    md:row-start-10
+    md:col-span-4
+    md:row-span-3
+ /* pc 9x12 */
+    lg:col-start-1
+    lg:row-start-8
+    lg:col-span-2
+    lg:row-span-2
+
+}

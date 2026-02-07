@@ -1,44 +1,50 @@
+@import "../App.css";
 @import "tailwindcss";
-@import "./App.css";
 
-.carousel-container {
-  @apply relative w-full h-full overflow-hidden rounded-lg bg-pinky-card cursor-pointer;
 
-  /* --- ESTILOS DEL TÍTULO "PROJECTS" --- */
-  & .projects-hover-title {
+.grid-container .mod-5 {
+    @apply relative w-full h-full overflow-hidden rounded-lg bg-pinky-card cursor-pointer
+    /* celu 3x12 */
+    col-start-1
+    row-start-7
+    col-span-3 
+    row-span-2 
+ /* tablet 12x12 */ 
+    md:col-start-1
+    md:row-start-6
+    md:col-span-6
+    md:row-span-4
+ /* pc 9x12 */
+    lg:col-start-3
+    lg:row-start-6
+    lg:col-span-4
+    lg:row-span-4
+    ;
+
+    & .projects-hover-title {
     @apply absolute inset-0 z-50 flex items-center justify-center
            text-4xl font-extrabold text-pinky-pink tracking-widest uppercase
            opacity-0 transition-all duration-300 ease-out
-           translate-y-4; /* Empieza un poquito abajo para subir al aparecer */
-    
-    /* Efecto de texto con borde brillante (opcional) */
+           translate-y-4 text-center ; 
     text-shadow: 0 0 20px var(--color-pinky-soft);
   }
 
-  /* --- LÓGICA DEL HOVER --- */
   &:hover {
-    /* 1. Aparece el título */
     & .projects-hover-title {
       @apply opacity-100 translate-y-0;
     }
 
-    /* 2. El carrusel se oscurece y se desenfoca */
     & .carousel-track {
-      @apply opacity-20 blur-[2px] scale-105; /* scale para efecto de "respiro" */
+      @apply opacity-20 blur-[2px] scale-105; 
     }
-
-    /* 3. Ocultamos los puntitos e info para limpiar la vista */
     & .carousel-indicators, 
     & .slide-content {
       @apply opacity-0 transition-opacity duration-300;
     }
-  }
+  }   
 }
-
-/* --- RESTO DE TU CSS (Con pequeños ajustes) --- */
-
 .carousel-track {
-  @apply flex h-full w-full transition-all duration-500 ease-in-out; /* Cambié transform por all para el blur */
+  @apply flex h-full w-full transition-all duration-500 ease-in-out; 
 }
 
 .carousel-slide {

@@ -1,0 +1,45 @@
+@import "../App.css";
+@import "tailwindcss";
+
+.grid-container .mod-8 {
+    @apply bg-pinky-pink/5 flex flex-col items-center justify-start lg:p-4 md:p-2 p-2 rounded-lg
+ /* celu 3x12 */
+    col-start-1
+    row-start-9
+    col-span-3 
+    row-span-2 
+ /* tablet 12x12 */ 
+    md:col-start-7
+    md:row-start-7
+    md:col-span-6
+    md:row-span-3
+ /* pc 9x12 */
+    lg:col-start-7
+    lg:row-start-7
+    lg:col-span-6
+    lg:row-span-3
+}
+    .mod-8 h3 {
+        @apply text-pinky-muted text-xl uppercase tracking-[0.2em] mb-2 font-semibold
+    }
+    .loading {
+        @apply text-pinky-muted text-sm animate-pulse
+    }
+    .github-grid-container {
+        @apply w-[90%] h-[60%] grid grid-rows-7 grid-flow-col gap-y-2 gap-x-1
+    }
+    .item-git {
+        @apply lg:w-3.5 lg:h-3.5 w-2.5 h-2.5 md:w-2.75 md:h-2.75 hover:scale-125 transition-transform duration-200 p-1
+    }
+    .references {
+        @apply flex items-center gap-2 text-[16px] text-pinky-muted mt-3 opacity-60 font-mono
+    }
+    .ref-1 {
+        @apply w-2 h-2 rounded-[1px] bg-pinky-card border border-pinky-border-pink
+    }
+    .ref-2 {
+        @apply w-2 h-2 rounded-[1px] bg-pinky-soft/60
+    }
+    .ref-3 {
+        @apply w-2 h-2 rounded-[1px] bg-pinky-pink
+    }

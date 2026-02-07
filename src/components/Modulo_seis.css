@@ -1,0 +1,37 @@
+@import "../App.css";
+@import "tailwindcss";
+
+.grid-container .mod-6 {
+ @apply bg-pinky-border-hover flex items-center justify-center
+ /* celu 3x12 */
+    col-start-3
+    row-start-3
+    col-span-1 
+    row-span-1 
+ /* tablet 12x12 */ 
+    md:col-start-7
+    md:row-start-6
+    md:col-span-2
+    md:row-span-1
+ /* pc 9x12 */
+    lg:col-start-7
+    lg:row-start-6
+    lg:col-span-2
+    lg:row-span-1
+}
+
+.clock-content {
+  @apply flex flex-col items-center justify-center text-center;
+}
+
+.mod-6 .clock-time {
+    @apply font-mono font-bold text-pinky-pink 
+    drop-shadow-[0_0_10px_rgba(251,207,232,0.3)] leading-none
+    text-3xl
+    md:text-2xl
+    lg:text-4xl
+}
+.text-clock {
+  @apply  text-pinky-muted
+  text-lg
+}

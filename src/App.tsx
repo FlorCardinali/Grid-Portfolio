@@ -1,12 +1,18 @@
 import './App.css'
-import Clock from './Clock.js';
-import Carousel from './Carousel.js';
-import GithubGraph from './GithubGraph.js';
-import { useState, useEffect } from 'react';
+import {useEffect } from 'react';
+import Modulo_uno from './components/Modulo_uno.js';
+import Modulo_dos from './components/Modulo_dos.js';
+import Modelo_tres from './components/Modulo_tres.js';
+import Modulo_cuatro from './components/Modulo_cuatro.js';
+import Modulo_cinco from './components/Modulo_cinco.js';
+import Modulo_seis from './components/Modulo_seis.js';
+import Modulo_siete from './components/Modulo_siete.js';
+import Modulo_nueve from './components/Modulo_nueve.js';
+import Modulo_ocho from './components/Modulo_ocho.js';
+
 
 function App() {
-  const phrases = ["Scalable Architecture", "Intuitive Design", "Responsive Layouts"];
-  const [index, setIndex] = useState(0);
+  
 
   useEffect(() => {
 
@@ -17,13 +23,8 @@ function App() {
     }
   }, 300); // 1 segundo es suficiente
 
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-    }, 3500);
-
     return () => {
       clearTimeout(timer); // Limpieza del timeout
-      clearInterval(interval); // Limpieza al desmontar
     };
   }, []);
 
@@ -31,45 +32,16 @@ function App() {
   return (
       <div className="grid-container">
         
-        {/* MODULO 1 */}
-        <div className="mod-1">
-          <h3>Full-Stack Developer</h3>
-          <h1>Building digital experiences with
-            <p key={phrases[index]} id='colorfull-text'>{phrases[index]}</p>
-          </h1>
-        </div>
-        {/* MODULO 2 */}
-        <div className="mod-2">
-          <h3>About Me</h3>
-          <p>I am a <span>University Technician in Programming</span> (UTN) passionate about Scalable Architecture and Intuitive Design.
-          I combine <span>creativity</span> with <span>logic</span> to build <span>Full Stack Web Apps</span> (React, Node.js) and <span>Video Games</span> (Unity). My focus is always on writing clean code and creating meaningful experiences. I am <span>proactive</span> and ready to bring ideas to life
-          </p>
-        </div>
-        {/* MODULO 3 */}
-        <div className="mod-3">3</div>
-        {/*  MODULO 4 */}
-        <div className="mod-4">4</div>
-        {/*  MODULO 5 */}
-        <div className="mod-5">
-          <Carousel />
-        </div>
-        {/*  MODULO 6 */}
-        <div className="mod-6">
-          <Clock />
-        </div>
-        {/*  MODULO 7  */}
-        <div className="mod-7">
-        <h4 id='experience-years'>+3</h4>
-        <p>Años de experiencia en proyectos</p>  
-        </div>
-        {/*  MODULO 8 */}
-        <div className="mod-8">8</div>
-        {/*  MODULO 9 */}
-        <div className="mod-9">
-          <GithubGraph />
-        </div>
-        {/*  MODULO 10 */}
-        <div className="mod-10">10</div>    
+        <Modulo_uno />
+        <Modulo_dos />
+        <Modelo_tres />
+        <Modulo_cuatro />
+        <Modulo_cinco />
+        <Modulo_seis />
+        <Modulo_siete />
+        <Modulo_nueve />
+        <Modulo_ocho />
+         
     </div>
   )
 }

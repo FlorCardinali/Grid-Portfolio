@@ -1,0 +1,49 @@
+@import "../App.css";
+@import "tailwindcss";
+
+
+.grid-container .mod-1 {
+ @apply 
+    bg-linear-to-tr from-pinky-main from-60%
+    to-pinky-soft/20 
+    flex flex-col justify-center md:px-10 px-4
+
+ /* celu 3 x 12*/
+    col-start-1 
+    row-start-1 
+    col-span-3 
+    row-span-2 
+/* Tablet 12 x 12*/
+    md:col-start-1
+    md:row-start-1
+    md:col-span-8 
+    md:row-span-5  
+    md:gap-2 ;
+
+}
+    .mod-1 h3 {
+        @apply  text-pinky-muted font-semibold font-[Arial] w-[90%]
+        /* responsive */
+        md:text-xl lg:text-2xl text-[18px]
+    }
+    .mod-1 h1 {
+        @apply text-pinky-base font-[Arial] lg:w-120 w-[80%] font-extrabold
+        /* responsive */
+        md:text-3xl lg:text-5xl text-2xl
+    }
+
+    #colorfull-text {
+        @apply animate-fade-slide font-extrabold pb-5 max-h-50  max-w-[95%]
+        /* responsive */
+        md:text-5xl lg:text-6xl text-4xl
+        ;
+
+        color: var(--color-pinky-pink);
+        background-image: linear-gradient(to right, var(--color-pinky-pink), var(--color-pinky-soft));
+        background-clip: text;
+        -webkit-background-clip: text; 
+        /* PARA SAFARI/CHROME */ 
+        @supports (-webkit-background-clip: text) or (background-clip: text) {
+            color: transparent;
+        }
+    }
