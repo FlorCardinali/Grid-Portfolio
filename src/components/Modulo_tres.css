@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 .grid-container .mod-3 {
- @apply flex items-center justify-center relative overflow-hidden 
+ @apply flex items-center justify-center relative overflow-hidden p-5
 
  /* celu 3x12 */
     col-start-1 
@@ -38,15 +38,6 @@
   left: -50%;
   top: 0%;
   border-radius: 40% 50% 40% 50%; 
-
-  /* EN PC: Vuelven a ser gigantes */
-  /* @media (min-width: 768px) {
-    width: 200%;
-    height: 200%;
-    left: -50%;
-    top: -50%;
-    border-radius: 45%;
-  } */
 }
 
 /* --- ONDA 1 (Fondo) --- */

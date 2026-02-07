@@ -20,19 +20,19 @@
     lg:row-span-3
 }
     .mod-8 h3 {
-        @apply text-pinky-muted text-xl uppercase tracking-[0.2em] mb-2 font-semibold
+        @apply text-pinky-muted md:text-xl lg:text-3xl uppercase tracking-[0.2em] pb-[4%] font-semibold
     }
     .loading {
         @apply text-pinky-muted text-sm animate-pulse
     }
     .github-grid-container {
-        @apply w-[90%] max-h-[95%] grid grid-rows-7 grid-flow-col gap-y-1.5
+        @apply w-[90%] max-h-[95%] max-w-[600px] grid grid-rows-7 grid-flow-col gap-y-1.5
     }
     .item-git {
         @apply lg:w-3.5 lg:h-3.5 w-2.5 h-2.5  hover:scale-125 transition-transform duration-200 
     }
     .references {
-        @apply flex items-center gap-2 text-[16px] text-pinky-muted mt-3 opacity-60 font-mono
+        @apply flex items-center gap-2 text-[16px] text-pinky-muted mt-3 opacity-60 font-mono pt-[3%]
     }
     .ref-1 {
         @apply w-2 h-2 rounded-[1px] bg-pinky-card border border-pinky-border-pink

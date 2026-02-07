@@ -1,8 +1,14 @@
 @import "../App.css";
 @import "tailwindcss";
 
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
 .grid-container .mod-4 {
- @apply 
+ @apply relative flex items-center justify-center overflow-hidden bg-pinky-card pt-5
  
   /* celu 3x12 */
     col-start-3
@@ -19,5 +25,28 @@
     lg:row-start-8
     lg:col-span-2
     lg:row-span-2
+}
 
+.tech-title {
+    @apply absolute top-2 left-3 text-[10px] uppercase tracking-widest text-pinky-muted/50 font-bold z-20;
+}
+
+.tech-track {
+    @apply flex w-full h-full;
+}
+
+.tech-slide {
+    @apply min-w-full h-full flex flex-col items-center justify-center gap-2;
+}
+
+.tech-slide img {
+    @apply w-10 h-10 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)];
+    
+    @media (min-width: 1024px) {
+        @apply w-12 h-12;
+    }
+}
+
+.tech-name {
+    @apply text-pinky-base text-sm font-bold tracking-wide opacity-80;
 }

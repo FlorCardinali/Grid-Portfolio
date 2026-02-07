@@ -39,7 +39,7 @@
   box-sizing: border-box;
   background-color: #0d0f14 !important; 
   @apply md:py-5 flex items-center justify-center
-  md:max-h-screen  md:max-w-480 max-w-[97vw]
+  md:max-h-screen  md:max-w-480 max-w-[97vw] m-auto
 }
 
 .grid-container {
