@@ -39,21 +39,29 @@
   box-sizing: border-box;
   background-color: #0d0f14 !important; 
   @apply md:py-5 flex items-center justify-center
-  md:max-h-screen  md:max-w-480 max-w-[97vw] m-auto
+    md:max-w-480 max-w-screen px-5 m-auto;
+  @media (min-height: 800px) {
+    @apply md:max-h-screen;
+  }
 }
 
 .grid-container {
-  @apply grid p-3 gap-3 
+  @apply grid p-3 gap-3 h-full
 /* celu 3x12 */
   grid-cols-3 
   grid-rows-12  
 /* tablet 12x12 */
   md:grid-cols-12 
   md:grid-rows-12 
-  md:w-[90vw] md:h-[90vh]
-/* pc 9x12 */
+  md:w-[90vw] 
+/* pc 9x12 */ 
+  lg:grid-cols-12 
   lg:grid-rows-9 
-  lg:w-[80vw] lg:h-[95vh];
+  lg:w-[80vw]; 
+
+  @media (min-height: 800px) {
+    @apply md:h-[95vh];
+  }
 }
 
 .grid-container > * {
