@@ -33,29 +33,46 @@
   }
 
   --animate-spin-slow: spin-slow 10s linear infinite;
+
+  @keyframes simple-fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    
+    to { opacity: 1; transform: translateY(0); }
+  }
 }
 
 #root {
   box-sizing: border-box;
   background-color: #0d0f14 !important; 
-  @apply md:py-5 flex items-center justify-center
-    md:max-w-480 max-w-screen px-5 m-auto;
+  @apply  flex items-center justify-center
+     max-w-screen ;
   @media (min-height: 800px) {
     @apply md:max-h-screen;
   }
 }
 
+.app-main-layout {
+  @apply w-full h-full flex flex-col items-center justify-center;
+}
+/* --- CLASE GENÉRICA PARA LAS VISTAS --- */
+.view-container {
+  @apply w-screen md:h-screen flex justify-center items-center;
+}
+.animate-enter {
+  animation: simple-fade-in 0.7s ease-in forwards;
+}
+
 .grid-container {
-  @apply grid p-3 gap-3 h-full
+  @apply grid p-3 gap-3 h-full;
 /* celu 3x12 */
-  grid-cols-3 
-  grid-rows-12  
+  @apply grid-cols-3 
+  grid-rows-12;  
 /* tablet 12x12 */
-  md:grid-cols-12 
+  @apply md:grid-cols-12 
   md:grid-rows-12 
-  md:w-[90vw] 
+  md:w-[90vw]; 
 /* pc 9x12 */ 
-  lg:grid-cols-12 
+  @apply lg:grid-cols-12 
   lg:grid-rows-9 
   lg:w-[80vw]; 
 
@@ -63,6 +80,7 @@
     @apply md:h-[95vh];
   }
 }
+
 
 .grid-container > * {
   @apply  border-2 border-pinky-border-pink

@@ -1,4 +1,4 @@
-@import "../App.css";
+@import "../../App.css";
 @import "tailwindcss";
 
 
@@ -33,7 +33,7 @@
     }
 
     #colorfull-text {
-        @apply animate-fade-slide font-extrabold pb-5 max-h-50  max-w-[95%]
+        @apply animate-fade-slide font-extrabold pb-5 max-h-50  md:max-w-[95%] max-w-[70%]
         /* responsive */
         md:text-5xl lg:text-6xl text-4xl
         ;

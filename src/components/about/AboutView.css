@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "../../App.css";
+
+.about-layout {
+    @apply max-h-screen min-h-screen w-screen;
+}
+
+.about-layout section {
+    @apply h-[80vh] w-9/12
+}

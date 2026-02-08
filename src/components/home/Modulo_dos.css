@@ -1,12 +1,12 @@
-@import "../App.css";
+@import "../../App.css";
 @import "tailwindcss";
 
 .grid-container .mod-2 {
 
   @apply 
-  bg-[url(/beautiful-pink-peach-tree-blossom.webp)] bg-cover bg-top bg-no-repeat 
-  rounded-xl
-  relative flex flex-col justify-end p-5 overflow-hidden
+  bg-[url(/beautiful-pink-peach-tree-blossom.webp)] bg-cover bg-top bg-no-repeat bg-clip-padding
+  rounded-lg overflow-hidden
+  relative flex flex-col justify-end p-5 
   
  /* celu 3x12 */
     col-start-1
@@ -27,7 +27,7 @@
 
   &::after {
     content: '';
-    @apply absolute inset-0 rounded-lg transition-all duration-500 ease-in-out
+    @apply absolute inset-0 transition-all duration-500 ease-in-out
     bg-linear-to-t from-pinky-main  to-transparent ;
   }
   &:hover::after {
@@ -52,7 +52,7 @@
     transition-all duration-500 delay-100 ease-out
     text-[14px] font-bold md:font-normal
     md:text-[12px]
-    lg:text-[18px];
+    lg:text-[16px];
     }
     .mod-2:hover p {
     @apply opacity-100 translate-y-0;
