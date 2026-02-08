@@ -41,7 +41,7 @@ const Modulo_cuatro = () => {
     }, [currentIndex, techs.length]);
 
     return (  
-         <div className="mod-4 tech-slider-container">
+         <div className="mod-4">
             <div 
                 className="tech-track" 
                 style={{ 
@@ -61,7 +61,7 @@ const Modulo_cuatro = () => {
                                 className={`
                                     transition-all duration-700 ease-in-out
                                     ${isActive 
-                                        ? 'scale-175 mb-5 opacity-100 drop-shadow-[0_0_10px_rgba(244,114,182,0.5)]' 
+                                        ? 'scale-130 mb-5 opacity-100 drop-shadow-[0_0_10px_rgba(244,114,182,0.5)]' 
                                         : 'scale-90 opacity-40 grayscale' /* Hacemos los inactivos más chicos y grises */
                                     }
                                 `}
