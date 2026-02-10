@@ -82,7 +82,7 @@
 }
 
 .image-container {
-    @apply bg-[url("flor.webp")] bg-cover bg-no-repeat 
+    @apply bg-[url("/flor.webp")] bg-cover bg-no-repeat 
     bg-center overflow-hidden bg-clip-padding
     border-3 border-pinky-soft
      /* celu 3 */
