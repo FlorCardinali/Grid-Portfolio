@@ -8,7 +8,7 @@
 
 
 .grid-container .mod-4 {
- @apply relative flex items-center justify-center overflow-hidden bg-pinky-card py-8
+ @apply relative flex items-center justify-center overflow-hidden bg-pinky-border-hover py-8
  
   /* celu 3x12 */
     col-start-3

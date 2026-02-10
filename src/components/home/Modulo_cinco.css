@@ -24,7 +24,7 @@
     & .projects-hover-title {
     @apply absolute inset-0 z-50 flex items-center justify-center
            text-3xl font-extrabold text-pinky-pink tracking-widest uppercase
-           opacity-0 transition-all duration-300 ease-out
+           opacity-0 transition-all duration-300 ease-out p-3
            translate-y-4 text-center ; 
     text-shadow: 0 0 20px var(--color-pinky-soft);
   }
@@ -64,11 +64,11 @@
 }
 
 .slide-content h3 {
-  @apply block text-2xl font-bold text-pinky-pink drop-shadow-md bottom-18;
+  @apply block text-2xl font-bold text-pinky-soft/90 drop-shadow-md bottom-18;
 }
 
 .slide-content p {
-  @apply text-pinky-base text-sm font-medium max-w-[90%] drop-shadow-sm top-3;
+  @apply text-pinky-muted text-sm font-medium max-w-[90%] drop-shadow-sm top-3;
 }
 
 .carousel-indicators {
@@ -80,5 +80,5 @@
 }
 
 .indicator-dot.active {
-  @apply bg-pinky-pink w-6 shadow-[0_0_8px_rgba(251,207,232,0.8)];
+  @apply bg-pinky-soft w-6 shadow-[0_0_8px_rgba(251,207,232,0.8)];
 }

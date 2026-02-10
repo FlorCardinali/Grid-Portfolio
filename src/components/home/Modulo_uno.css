@@ -6,36 +6,54 @@
  @apply 
     bg-linear-to-tr from-pinky-main from-60%
     to-pinky-soft/20 
-    flex flex-col justify-center md:px-10 px-4
+    flex flex-col justify-center md:px-10 px-5
 
  /* celu 3 x 12*/
     col-start-1 
     row-start-1 
     col-span-3 
     row-span-2 
+    min-h-80 
 /* Tablet 12 x 12*/
     md:col-start-1
     md:row-start-1
     md:col-span-8 
     md:row-span-5  
-    md:gap-2 ;
+    md:min-h-50
+    md:gap-5;
 
 }
-    .mod-1 h3 {
-        @apply  text-pinky-muted font-semibold font-[Arial] w-[90%]
+.text-hero {
+    @apply flex flex-col gap-2;
+}
+
+    .text-hero h3 {
+        @apply  text-pinky-base font-semibold font-[Arial] 
         /* responsive */
-        md:text-xl lg:text-2xl text-[18px]
+        text-[15px]
+        md:text-xl 
+        lg:text-2xl 
     }
-    .mod-1 h1 {
-        @apply text-pinky-base font-[Arial] lg:w-120 w-[80%] font-extrabold
+    .text-hero h1 {
+        @apply text-pinky-muted font-["Inter"]  font-extrabold max-w-9/12
         /* responsive */
-        md:text-3xl lg:text-5xl text-2xl
+        text-2xl
+        md:text-3xl 
+        lg:text-5xl 
+        lg:w-6/12
     }
 
     #colorfull-text {
-        @apply animate-fade-slide font-extrabold pb-5 max-h-50  md:max-w-[95%] max-w-[70%]
+        @apply animate-fade-slide font-extrabold py-5  md:max-w-11/12 
+        uppercase font-[Arial] tracking-wider
         /* responsive */
-        md:text-5xl lg:text-6xl text-4xl
+        text-[40px]
+        leading-none
+        pt-5
+        min-h-30
+        md:text-5xl 
+        md:min-h-40
+        lg:text-6xl 
         ;
 
         color: var(--color-pinky-pink);

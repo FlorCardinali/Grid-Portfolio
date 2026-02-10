@@ -40,7 +40,7 @@
 }
     .mod-2 h3 {
     @apply text-4xl text-pinky-pink font-bold font-[Arial] z-10 
-    transition-transform duration-500 ease-out;
+    transition-transform duration-500 ease-out ;
     }
     .mod-2:hover h3 {
     @apply -translate-y-100 opacity-0;

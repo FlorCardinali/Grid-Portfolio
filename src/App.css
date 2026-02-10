@@ -56,7 +56,7 @@
 }
 /* --- CLASE GENÉRICA PARA LAS VISTAS --- */
 .view-container {
-  @apply w-screen md:h-screen flex justify-center items-center;
+  @apply max-w-screen md:h-screen flex justify-center items-center;
 }
 .animate-enter {
   animation: simple-fade-in 0.7s ease-in forwards;
@@ -87,4 +87,5 @@
   /* hover */
   hover:border-pinky-soft 
   hover:shadow-pinky-glow
+  cursor-pointer
 }

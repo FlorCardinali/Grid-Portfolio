@@ -2,10 +2,10 @@
 @import "../../App.css";
 
 #about{
-    @apply  self-start flex flex-col justify-center items-center gap-5 p-5
+    @apply  self-start flex flex-col justify-center items-center gap-5 pb-5 max-w-11/12 font-[Arial]
 }
 .volver{
-    @apply flex gap-10 self-start items-center
+    @apply sticky flex flex-row top-0 z-10 gap-10 self-start items-center bg-pinky-card/50 w-full h-16
 }
 
 .volver > button {
@@ -28,7 +28,7 @@
     pb-5
     /* tablet 9 */
     md:grid-cols-9
-    md:w-11/12
+    md:w-[95vw]
     md:p-5
     /* pc 12 */
     lg:grid-cols-12
@@ -37,7 +37,7 @@
 }
 
 .about-text{
-    @apply flex flex-col gap-10 font-mono 
+    @apply flex flex-col gap-10 font-[Arial]
     /* celu 3*/
     col-start-1
     col-span-3
@@ -56,9 +56,8 @@
     lg:pl-10
 }
 
-.about-text > h3 {
+.about-subtitle{
     @apply text-pinky-pink uppercase font-bold tracking-[10px]
-   
     /* celu 3x12 */
     text-2xl
     text-center
@@ -78,20 +77,20 @@
     lg:text-right
 }
 #pinky-text {
-    @apply text-pinky-soft font-bold
+    @apply text-pinky-soft font-extrabold    
 }
 
 .image-container {
-    @apply bg-[url("/flor.webp")] bg-cover bg-no-repeat bg-top
-    bg-center overflow-hidden bg-clip-padding
-    border-3 border-pinky-soft
+    @apply bg-[url("/florcardinali.webp")] bg-cover bg-no-repeat
+    bg-center  overflow-hidden bg-clip-padding
+    border-3 border-pinky-pink/40
      /* celu 3 */
     col-start-1
     col-span-3 
     row-start-2
     row-span-3
     w-full
-    min-h-90
+    min-h-100
     /*tablet 9 */
     md:col-start-6
     md:col-span-4
@@ -105,3 +104,118 @@
     lg:row-start-2
     lg:row-span-1
 }
+
+.skill-title{
+    @apply  px-5 
+    /* celular */
+    col-start-1
+    col-span-3
+    row-start-11
+    row-span-1
+    text-lg
+    pt-10
+    /* tablet */
+    md:col-start-1
+    md:col-span-10
+    md:row-start-3
+    md:row-span-1
+    md:text-2xl
+    md:text-center
+    md:pb-12
+    /* pc */
+    lg:col-start-2
+    lg:col-span-10
+}
+
+
+.skill > h4 {
+    @apply text-pinky-base font-bold px-10
+    tracking-[5px] font-[Arial]
+    /* celular */
+    text-xl
+    pb-5
+    /* tablet */
+    md:text-2xl
+    md:p-0
+}
+.skill > p {
+    @apply text-pinky-muted text-lg font-[Arial] px-10 text-justify
+}
+.skill-one{
+    @apply 
+    /* celular */
+    col-start-1
+    col-span-3
+    row-start-16
+    row-span-4
+    text-lg
+    /* tablet */
+    md:col-start-1
+    md:col-span-10
+    md:row-start-4
+    md:row-span-1
+    /* pc */
+    lg:col-start-2
+    lg:col-span-10
+}
+.skill-two{
+    @apply col-start-1
+    col-span-3
+    row-start-21
+    row-span-4
+    text-lg
+    /* tablet */
+    md:col-start-1
+    md:col-span-10
+    md:row-start-5
+    md:row-span-1
+    /* pc */
+    lg:col-start-2
+    lg:col-span-10
+}
+.skill-three{
+    @apply col-start-1
+    col-span-3
+    row-start-26
+    row-span-4
+    text-lg
+    /* tablet */
+    md:col-start-1
+    md:col-span-10
+    md:row-start-6
+    md:row-span-1
+    /* pc */
+    lg:col-start-2
+    lg:col-span-10
+}
+.skill-four{
+    @apply col-start-1
+    col-span-3
+    row-start-31
+    row-span-4
+    text-lg
+    /* tablet */
+    md:col-start-1
+    md:col-span-10
+    md:row-start-7
+    md:row-span-1
+    /* pc */
+    lg:col-start-2
+    lg:col-span-10
+}
+.skill-five{
+    @apply 
+    col-start-1
+    col-span-3
+    row-start-36
+    row-span-4
+    text-lg
+    /* tablet */
+    md:col-start-1
+    md:col-span-10
+    md:row-start-8
+    md:row-span-1
+    /* pc */
+    lg:col-start-2
+    lg:col-span-10
+}   
