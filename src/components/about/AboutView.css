@@ -1,10 +1,107 @@
 @import "tailwindcss";
 @import "../../App.css";
 
-.about-layout {
-    @apply max-h-screen min-h-screen w-screen;
+#about{
+    @apply  self-start flex flex-col justify-center items-center gap-5 p-5
+}
+.volver{
+    @apply flex gap-10 self-start items-center
 }
 
-.about-layout section {
-    @apply h-[80vh] w-9/12
+.volver > button {
+    @apply bg-pinky-pink/60 rounded-2xl
+    hover:bg-pinky-pink hover:text-pinky-main
+    text-pinky-base font-extrabold text-2xl uppercase font-mono
+    h-8 w-24
+    flex items-center justify-center 
+}
+
+.volver > h1 {
+    @apply text-pinky-base flex items-center font-bold tracking-[5px] text-4xl font-mono justify-center
+}
+
+.about-grid-layout {
+    @apply grid  
+    gap-3 bg-pinky-card
+    /* celular 3 */
+    grid-cols-3
+    pb-5
+    /* tablet 9 */
+    md:grid-cols-9
+    md:w-11/12
+    md:p-5
+    /* pc 12 */
+    lg:grid-cols-12
+    lg:w-9/12
+    ;
+}
+
+.about-text{
+    @apply flex flex-col gap-10 font-mono 
+    /* celu 3*/
+    col-start-1
+    col-span-3
+    row-start-7
+    row-span-4
+    text-4xl
+    /* tablet 9 */
+    md:col-start-1
+    md:col-span-5
+    md:row-start-2
+    md:row-span-1
+    md:px-8
+    /* pc 12 */
+    lg:col-span-6
+    lg:px-0
+    lg:pl-10
+}
+
+.about-text > h3 {
+    @apply text-pinky-pink uppercase font-bold tracking-[10px]
+   
+    /* celu 3x12 */
+    text-2xl
+    text-center
+     /* tablet 12x12 */
+    md:text-right
+}
+
+
+.about-text > p {
+    @apply text-pinky-muted text-lg font-semibold
+    /* celu 3 */
+    text-justify
+    px-10
+    /* tablet 9 */
+    md:p-0
+    /* pc 12 */
+    lg:text-right
+}
+#pinky-text {
+    @apply text-pinky-soft font-bold
+}
+
+.image-container {
+    @apply bg-[url("flor.webp")] bg-cover bg-no-repeat 
+    bg-center overflow-hidden bg-clip-padding
+    border-3 border-pinky-soft
+     /* celu 3 */
+    col-start-1
+    col-span-3 
+    row-start-2
+    row-span-3
+    w-full
+    min-h-90
+    /*tablet 9 */
+    md:col-start-6
+    md:col-span-4
+    md:row-start-2
+    md:row-span-1
+    md:w-auto
+    md:rounded-2xl
+    /* pc 12 */
+    lg:col-start-8
+    lg:col-span-5
+    lg:row-start-2
+    lg:row-span-1
 }

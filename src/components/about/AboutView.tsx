@@ -6,28 +6,32 @@ interface AboutViewProps {
 
 const AboutView: React.FC<AboutViewProps> = ({ onBack }) => {
   return (
-    <div className="about-layout">
-        <button 
+    <section id="about">
+      <div className='volver'>
+        <button
           onClick={onBack}
           className="home-page-buttom"
         >
-          ← Home
+          Home
         </button>
+        <h1>Info</h1>
+      </div>
 
-      <section>
-        <h1>About Me Section</h1>
-        <p>
-          Hello! I am <span>Florencia Cardinali</span>, a developer who loves mixing logic with creativity. My passion is to create beautiful interfaces and immersive digital experiences.
+      <div className="about-grid-layout">
+        <div className='about-text'>
+          <h3>Introduction</h3>
+          <p>Hello! I am <span id='pinky-text'>Florencia Cardinali</span>, a developer who loves mixing logic with creativity. My passion is to create <span id='pinky-text'>beautiful interfaces</span> and immersive digital experiences.
+            <br></br><br></br>
+            I have experience working with modern web technologies and game development. I am <span id='pinky-text'>always learning new tools</span> to improve my work. My goal is to build projects that look <span id='pinky-text'>good and work perfectly</span>.
+          </p>
+        </div>
 
-          I have experience working with modern web technologies and game development. I am always learning new tools to improve my work. My goal is to build projects that look good and work perfectly.
-        </p>
-      </section>
-      
-      <img src="" alt="" />
+        {/* profile image */}
+        <div className='image-container'>
+        </div>
+      </div>
+    </section>
 
-    
-
-    </div>
   );
 };
 

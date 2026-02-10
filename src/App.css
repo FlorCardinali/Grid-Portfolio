@@ -70,11 +70,10 @@
 /* tablet 12x12 */
   @apply md:grid-cols-12 
   md:grid-rows-12 
-  md:w-[90vw]; 
+  md:w-11/12; 
 /* pc 9x12 */ 
   @apply lg:grid-cols-12 
-  lg:grid-rows-9 
-  lg:w-[80vw]; 
+  lg:grid-rows-9 ; 
 
   @media (min-height: 800px) {
     @apply md:h-[95vh];
