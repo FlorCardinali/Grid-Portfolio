@@ -12,19 +12,17 @@ const Modulo_seis = () => {
         timeZone: "America/Argentina/Buenos_Aires",
         hour: "2-digit",
         minute: "2-digit",
-        hour12: false, 
+        hour12: false,
     });
 
 
 
-    return (  
-         <div className="mod-6 ">  
-            <div className="clock-content">
-                <h2 className="clock-time">{timeString} </h2>
-                <span className="text-clock">ARG</span>
-            </div>     
+    return (
+        <div className="mod-6 ">
+            <time className="clock-time">{timeString} </time>
+            <span className="text-clock">ARG</span>
         </div>
     );
 }
- 
+
 export default Modulo_seis;

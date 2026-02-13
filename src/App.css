@@ -89,3 +89,6 @@
   hover:shadow-pinky-glow
   cursor-pointer
 }
+#pinky-text {
+    @apply text-pinky-soft font-extrabold    
+}

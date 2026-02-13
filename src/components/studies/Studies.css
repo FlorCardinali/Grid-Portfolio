@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "../../App.css";
+
+
+.studies-container{
+    @apply flex flex-col self-start
+}
+
+
+.volver{
+    @apply flex flex-row top-0 z-10 gap-10 self-start items-center bg-pinky-card/50 w-full h-16
+}
+
+.volver > button {
+    @apply bg-pinky-pink/60 rounded-2xl
+    hover:bg-pinky-pink hover:text-pinky-main
+    text-pinky-base font-extrabold text-2xl uppercase font-mono
+    h-8 w-24
+    flex items-center justify-center 
+}
+
+.volver > span {
+    @apply text-pinky-base font-bold tracking-[5px] text-4xl font-mono 
+}
+

@@ -1,12 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/src/index.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>grid-portfolio</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon-96x96.png" />
+  <link rel="stylesheet" href="/src/index.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" as="image" href="/catus.webp" />
+  <link rel="preload" as="image" href="/depto.webp" />
+  <link rel="preload" as="image" href="/cosmoshoes.webp" />
+  <link rel="preload" as="image" href="/ip.webp" />
+  <link rel="preload" as="image" href="/about-background.webp" />
+
+  <title>Florencia Cardinali | Full Stack Developer & Game Dev</title>
+  <meta name="geo.region" content="AR-B" />
+  <meta name="geo.placename" content="Bahía Blanca" />
+  <meta name="geo.position" content="-38.7183;-62.2663" />
+  <meta name="ICBM" content="-38.7183, -62.2663" />
+  <meta name="description"
+    content="Portfolio of Florencia Cardinali. Full Stack Developer & Game Dev specialized in React, Node.js, and Unity. Building scalable web apps and immersive digital experiences." />
+  <meta name="keywords"
+    content="Florencia Cardinali, Full Stack Developer, Game Developer, Frontend Dev, React Developer, Unity, C#, Portfolio, Programadora Argentina, Bahía Blanca, Desarrollo Web, Videojuegos, Disability, Accessibility, Front-End, Tailwind CSS, Express, Remoto, Argentina, Buenos Aires, Node.js, Flor Cardinali, Portfolio, Portafolio, Portafolio Frontend, Portafolio Full Stack, Portafolio Game Dev, Portafolio Programadora, Portafolio Programadora Argentina, Portafolio Programadora Bahía Blanca, Portafolio Programadora Desarrollo Web, Portafolio Programadora Videojuegos, Portafolio Programadora Disability, Portafolio Programadora Accessibility, Portafolio Programadora Front-End, Portafolio Programadora Tailwind CSS, Portafolio Programadora Express, Portafolio Programadora Remoto, Portafolio Programadora Argentina, Portafolio Programadora Buenos Aires, Portafolio Programadora Node.js, Portafolio Programadora Unity, Portafolio Programadora C#" />
+
+  <meta name="author" content="Florencia Cardinali" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Florencia Cardinali | Full Stack & Game Dev" />
+  <meta property="og:description"
+    content="Check out my portfolio! I build creative web apps and video games using React and Unity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tu-portfolio-url.com" />
+  <meta property="og:image" content="https://tu-portfolio-url.com/preview-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Florencia Cardinali Portfolio" />
+  <meta name="twitter:description" content="Full Stack Developer & Game Dev based in Argentina." />
+  <meta name="twitter:image" content="https://tu-portfolio-url.com/preview-image.jpg" />
+
+  <meta name="theme-color" content="#831843" />
+  <meta name="google-site-verification"
+    content="google-site-verification=a9TcGSmdRrX22lLCWWCTD3Cyvy0SI_Ixi_L4LqdXFY0" />
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Florencia Paula Cardinali",
+    "jobTitle": "Full Stack Developer & Game Dev",
+    "url": "https://florenciacardinali.netlify.app/",
+    "sameAs": [
+      "https://www.linkedin.com/in/florencia-cardinali/",
+      "https://github.com/FlorCardinali"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bahía Blanca",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "Argentina"
+    }
+  }
+</script>
+</head>
 
 <style>
   /* Colores fijos para evitar el flash gris */
@@ -15,7 +68,8 @@
     --pink-pastel: #fbcfe8;
   }
 
-  body, html {
+  body,
+  html {
     background-color: var(--bg-black) !important;
     margin: 0;
     padding: 0;
@@ -44,17 +98,23 @@
   }
 
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
 </style>
 
-  
-  <body>
-    <div id="preloader-global" class="preloader">
-      <div class="spinner"></div>
-    </div>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<body>
+  <div id="preloader-global" class="preloader">
+    <div class="spinner"></div>
+  </div>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

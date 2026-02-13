@@ -16,7 +16,7 @@
     flex items-center justify-center 
 }
 
-.volver > h1 {
+.volver > span {
     @apply text-pinky-base flex items-center font-bold tracking-[5px] text-4xl font-mono justify-center
 }
 
@@ -76,9 +76,7 @@
     /* pc 12 */
     lg:text-right
 }
-#pinky-text {
-    @apply text-pinky-soft font-extrabold    
-}
+
 
 .image-container {
     @apply bg-[url("/florcardinali.webp")] bg-cover bg-no-repeat

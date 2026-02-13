@@ -27,33 +27,33 @@
     @apply flex flex-col gap-2;
 }
 
-    .text-hero h3 {
+    .text-hero h1 {
         @apply  text-pinky-base font-semibold font-[Arial] 
         /* responsive */
-        text-[15px]
+        text-[20px]
         md:text-xl 
         lg:text-2xl 
     }
-    .text-hero h1 {
-        @apply text-pinky-muted font-["Inter"]  font-extrabold max-w-9/12
+    .text-hero > p {
+        @apply text-pinky-muted font-["Inter"]  font-extrabold max-w-12/12
         /* responsive */
-        text-2xl
-        md:text-3xl 
+        text-3xl
+        md:text-4xl 
         lg:text-5xl 
-        lg:w-6/12
+        lg:w-10/12
     }
 
     #colorfull-text {
-        @apply animate-fade-slide font-extrabold py-5  md:max-w-11/12 
-        uppercase font-[Arial] tracking-wider
+        @apply animate-fade-slide font-extrabold   
+        uppercase font-[Arial] flex items-center
         /* responsive */
         text-[40px]
-        leading-none
-        pt-5
         min-h-30
-        md:text-5xl 
+        max-w-8/12
+        md:max-w-11/12
+        md:text-6xl 
         md:min-h-40
-        lg:text-6xl 
+        lg:text-7xl 
         ;
 
         color: var(--color-pinky-pink);

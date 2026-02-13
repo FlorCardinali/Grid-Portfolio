@@ -2,36 +2,36 @@
 @import "tailwindcss";
 
 .grid-container .mod-6 {
- /* celu 3x12 */
- /* tablet 12x12 */
- /* pc 9x12 */
- @apply bg-pinky-border-hover flex items-center justify-center
+ @apply bg-pinky-border-hover flex flex-col items-center p-1 justify-center 
+ /* celular */
     col-start-3
     row-start-3
     col-span-1 
     row-span-1 
+    /* tablet */
     md:col-start-7
     md:row-start-6
     md:col-span-2
     md:row-span-1
+    md:flex-row
+    md:gap-1
+    /* pc */
     lg:col-start-7
     lg:row-start-6
     lg:col-span-2
-    lg:row-span-1;
+    lg:row-span-1
+    lg:gap-4;
 }
 
-.clock-content {
-  @apply flex flex-wrap items-end justify-center gap-x-2 text-center p-1;
-}
 
-.mod-6 .clock-time {
-    @apply font-mono font-bold text-pinky-pink 
-    drop-shadow-[0_0_10px_rgba(251,207,232,0.3)] leading-none
+.clock-time {
+    @apply font-mono font-bold text-pinky-pink
+    drop-shadow-[0_0_10px_rgba(251,207,232,0.3)] 
     text-3xl
     md:text-xl
     lg:text-3xl
 }
 .text-clock {
   @apply  text-pinky-muted
-  lg:text-lg text-sm font-mono
+  lg:text-lg text-sm font-mono 
 }

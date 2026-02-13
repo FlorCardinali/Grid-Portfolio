@@ -21,12 +21,12 @@
     lg:row-span-2
     ;
 
-    &:hover h3 {
+    &:hover h2 {
         text-shadow: 0 0 20px var(--color-pinky-soft);
     }
 }
 
-.mod-3 h3 {
+.mod-3 h2 {
     @apply  text-center font-extrabold text-pinky-pink tracking-widest uppercase md:text-2xl text-xl relative z-10;
     
 }
@@ -40,7 +40,6 @@
   border-radius: 40% 50% 40% 50%; 
 }
 
-/* --- ONDA 1 (Fondo) --- */
 .wave-1 {
   @apply bg-black;
   animation: var(--animate-spin-slow); 
@@ -49,12 +48,9 @@
   border-radius: 30% 55% 70% 60% / 55% 40% 60% 45%; 
 }
 
-/* HOVER: Cuando toco .mod-3, cambio .wave-1 */
 .mod-3:hover .wave-1 {
   @apply bg-pinky-pink/20;
 }
-
-/* --- ONDA 2 (Medio) --- */
 .wave-2 {
   @apply bg-pinky-main/90;
   animation: var(--animate-spin-slow);
@@ -63,12 +59,10 @@
   border-radius: 55% 45% 60% 40% / 40% 60% 45% 55%;
 }
 
-/* HOVER: Cuando toco .mod-3, cambio .wave-2 */
 .mod-3:hover .wave-2 {
   @apply bg-pinky-main/50;
 }
 
-/* --- ONDA 3 (Frente) --- */
 .wave-3 {
   @apply bg-pinky-border-pink;
   animation: var(--animate-spin-slow);

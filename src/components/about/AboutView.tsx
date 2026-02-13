@@ -14,7 +14,7 @@ const AboutView: React.FC<AboutViewProps> = ({ onBack }) => {
         >
           Home
         </button>
-        <h1>Info</h1>
+        <span>Info</span>
       </div>
 
       <div className="about-grid-layout">
@@ -27,8 +27,8 @@ const AboutView: React.FC<AboutViewProps> = ({ onBack }) => {
         </div>
 
         {/* profile image */}
-        <div className='image-container'>
-        </div>
+        <span className='image-container'>
+        </span>
         <h3 className='about-subtitle skill-title'>Skills and Beliefs</h3>
 
         <div className='skill skill-one'>

@@ -24,8 +24,8 @@ const Modulo_cuatro = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => prevIndex + 1);
-            setIsTransitioning(true); 
-        }, 3000); 
+            setIsTransitioning(true);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, []);
@@ -33,35 +33,35 @@ const Modulo_cuatro = () => {
     useEffect(() => {
         if (currentIndex === techs.length) {
             timeoutRef.current = setTimeout(() => {
-                setIsTransitioning(false); 
+                setIsTransitioning(false);
                 setCurrentIndex(0);
             }, 700);
         }
         return () => clearTimeout(timeoutRef.current);
     }, [currentIndex, techs.length]);
 
-    return (  
-         <div className="mod-4">
-            <div 
-                className="tech-track" 
-                style={{ 
+    return (
+        <div className="mod-4">
+            <div
+                className="tech-track"
+                style={{
                     transform: `translateX(-${currentIndex * 100}%)`,
-                    transition: isTransitioning ? "transform 0.7s ease-in-out" : "none" 
+                    transition: isTransitioning ? "transform 0.7s ease-in-out" : "none"
                 }}
             >
                 {extendedTechs.map((tech, i) => {
                     // Calculamos si es el activo
                     const isActive = i === currentIndex || (currentIndex === techs.length && i === 0);
-                    
+
                     return (
-                        <div key={i} className="tech-slide">
-                            <img 
-                                src={tech.img} 
-                                alt={tech.name} 
+                        <span key={i} className="tech-slide">
+                            <img
+                                src={tech.img}
+                                alt={tech.name}
                                 className={`
                                     transition-all duration-700 ease-in-out
-                                    ${isActive 
-                                        ? 'scale-130 mb-5 opacity-100 drop-shadow-[0_0_10px_rgba(244,114,182,0.5)]' 
+                                    ${isActive
+                                        ? 'scale-130 mb-5 opacity-100 drop-shadow-[0_0_10px_rgba(244,114,182,0.5)]'
                                         : 'scale-90 opacity-40 grayscale' /* Hacemos los inactivos más chicos y grises */
                                     }
                                 `}
@@ -70,14 +70,14 @@ const Modulo_cuatro = () => {
                             <span className={`tech-name transition-opacity duration-700 ${isActive ? 'opacity-100 text-pinky-pink' : 'opacity-50'}`}>
                                 {tech.name}
                             </span>
-                        </div>
+                        </span>
                     )
                 })}
             </div>
 
-           
+
         </div>
     );
 }
- 
+
 export default Modulo_cuatro;
