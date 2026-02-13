@@ -7,12 +7,12 @@ interface ModuloDosProps {
 const Modulo_dos: React.FC<ModuloDosProps> = ({ onClick }) => {
   return (
     <div className="mod-2" onClick={onClick}>
+      {/* SOLUCIÓN LCP: Imagen real en vez de background css */}
       <img
         src="/about-background.webp"
         alt="About me background"
         className="absolute inset-0 w-full h-full object-cover object-top z-0"
-        fetchPriority="high"
-      />
+        fetchPriority="high" />
 
       <h2 className="relative z-10">About Me</h2>
       <p className="relative z-10">

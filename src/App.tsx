@@ -40,7 +40,7 @@ function App() {
       {/* VISTA HOME (GRID) */}
       {view === 'home' && (
         <div className="view-container animate-enter">
-          <div className="grid-container">
+          <main className="grid-container">
             <Modulo_uno />
             <Modulo_dos onClick={() => setView('about')} />
             <Modelo_tres onClick={() => setView('studies')} />
@@ -51,7 +51,7 @@ function App() {
             <Suspense fallback={<div className="bg-pinky-card animate-pulse">Cargando GitHub...</div>}>
               <Modulo_ocho />
             </Suspense>
-          </div>
+          </main>
         </div>
       )}
       {/* VISTA ABOUT ME */}

@@ -16,8 +16,6 @@ interface ApiResponse {
 const Modulo_ocho = () => {
   const username = "FlorCardinali";
 
-  // 1. ESTADO: Iniciamos directamente con los datos locales. 
-  // No hay "loading" porque los datos existen desde el milisegundo 0.
   const [data, setData] = useState<Contribution[]>(
     (initialData as unknown as ApiResponse).contributions.slice(-133)
   );
@@ -58,7 +56,7 @@ const Modulo_ocho = () => {
 
   const getColor = (level: number) => {
     switch (level) {
-      case 0: return "bg-pinky-border-pink";
+      case 0: return "bg-pinky-muted/10";
       case 1: return "bg-pinky-soft/40";
       case 2: return "bg-pinky-soft/70";
       case 3: return "bg-pinky-pink";

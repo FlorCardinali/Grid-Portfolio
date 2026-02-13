@@ -18,9 +18,9 @@ const Modulo_uno = () => {
     <div className="mod-1">
       <div className="text-hero">
         <h1>Full-Stack Developer</h1>
-        <p>Building digital experiences with
+        <span>Building digital experiences with
           <p key={phrases[index]} id='colorfull-text'>{phrases[index]}</p>
-        </p>
+        </span>
       </div>
     </div>
   );

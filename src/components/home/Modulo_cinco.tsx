@@ -67,10 +67,9 @@ const Modulo_cinco = () => {
 
       <div className="carousel-indicators">
         {items.map((_, idx) => (
-          <button
+          <span
             key={idx}
             className={`indicator-dot ${currentIndex === idx ? "active" : ""}`}
-            onClick={() => setCurrentIndex(idx)}
           />
         ))}
       </div>

@@ -34,7 +34,7 @@
         md:text-xl 
         lg:text-2xl 
     }
-    .text-hero > p {
+    .text-hero > span {
         @apply text-pinky-muted font-["Inter"]  font-extrabold max-w-12/12
         /* responsive */
         text-3xl

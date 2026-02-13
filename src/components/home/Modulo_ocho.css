@@ -5,7 +5,7 @@
     /* celu 3x12 */
     /* tablet 12x12 */
     /* pc 9x12 */
-    @apply bg-pinky-pink/5 flex flex-col items-center justify-around rounded-lg py-5
+    @apply bg-pinky-muted/10 flex flex-col items-center justify-around rounded-lg py-5
     col-start-1
     row-start-9
     col-span-3 
@@ -20,7 +20,7 @@
     lg:row-span-3;
 }
     .mod-8 h3 {
-        @apply text-pinky-muted md:text-xl lg:text-3xl uppercase tracking-[0.2em] font-semibold
+        @apply text-pinky-pink md:text-xl lg:text-3xl uppercase tracking-[0.2em] font-semibold
     }
     .loading {
         @apply text-pinky-muted text-sm animate-pulse
@@ -29,13 +29,13 @@
         @apply w-[80%] max-h-[60%] max-w-110 grid grid-rows-7 grid-flow-col gap-y-1
     }
     .item-git {
-        @apply  w-2.5 h-2.5  hover:scale-125 transition-transform duration-200 
+        @apply  w-2.5 h-2.5 lg:w-3 lg:h-3 hover:scale-125 transition-transform duration-200 border border-pinky-muted/10
     }
     .references {
-        @apply flex items-center gap-2 text-[16px] text-pinky-muted opacity-60 font-mono 
+        @apply flex items-center gap-2 text-[16px] text-pinky-pink font-bold opacity-60 font-mono 
     }
     .ref-1 {
-        @apply w-2 h-2 rounded-[1px] bg-pinky-card border border-pinky-border-pink
+        @apply w-2 h-2 rounded-[1px] bg-pinky-muted/10 border border-pinky-muted/20
     }
     .ref-2 {
         @apply w-2 h-2 rounded-[1px] bg-pinky-soft/60
