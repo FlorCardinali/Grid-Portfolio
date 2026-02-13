@@ -19,7 +19,7 @@
     lg:col-span-6
     lg:row-span-3;
 }
-    .mod-8 h3 {
+    .github-title {
         @apply text-pinky-pink md:text-xl lg:text-3xl uppercase tracking-[0.2em] font-semibold
     }
     .loading {
@@ -34,6 +34,8 @@
     .references {
         @apply flex items-center gap-2 text-[16px] text-pinky-pink font-bold opacity-60 font-mono 
     }
+
+    
     .ref-1 {
         @apply w-2 h-2 rounded-[1px] bg-pinky-muted/10 border border-pinky-muted/20
     }

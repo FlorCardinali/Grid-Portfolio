@@ -58,7 +58,7 @@ const Modulo_cinco = () => {
 
             <div className="slide-overlay"></div>
             <div className="slide-content">
-              <h3>{item.title}</h3>
+              <p>{item.title}</p>
               <p>{item.desc}</p>
             </div>
           </div>

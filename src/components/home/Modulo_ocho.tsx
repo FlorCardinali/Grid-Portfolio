@@ -67,7 +67,7 @@ const Modulo_ocho = () => {
 
   return (
     <div className="mod-8">
-      <h3>Github Activity</h3>
+      <span className="github-title">Github Activity</span>
 
       <div className="github-grid-container">
         {data.map((item) => (

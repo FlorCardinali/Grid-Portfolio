@@ -16,8 +16,8 @@ const Modulo_dos: React.FC<ModuloDosProps> = ({ onClick }) => {
 
       <h2 className="relative z-10">About Me</h2>
       <p className="relative z-10">
-        I am a <span>University Technician in Programming</span> (UTN) passionate about Scalable Architecture and Intuitive Design.
-        I combine <span>creativity</span> with <span>logic</span> to build <span>Full Stack Web Apps</span> (React, Node.js) and <span>Video Games</span> (Unity). My focus is always on writing clean code and creating meaningful experiences. I am <span>proactive</span> and ready to bring ideas to life
+        I am a <span className="pinky-text">University Technician in Programming</span> (UTN) passionate about Scalable Architecture and Intuitive Design.
+        I combine <span className="pinky-text">creativity</span> with <span className="pinky-text">logic</span> to build <span className="pinky-text">Full Stack Web Apps</span> (React, Node.js) and <span className="pinky-text">Video Games</span> (Unity). My focus is always on writing clean code and creating meaningful experiences. I am <span className="pinky-text">proactive</span> and ready to bring ideas to life
       </p>
     </div>
   );

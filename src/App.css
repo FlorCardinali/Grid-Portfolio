@@ -43,37 +43,38 @@
 
 #root {
   box-sizing: border-box;
-  background-color: #0d0f14 !important; 
-  @apply  flex items-center justify-center
-     max-w-screen ;
-  @media (min-height: 800px) {
-    @apply md:max-h-screen;
-  }
+  background-color: #0d0f14 !important;
+  overflow-x: hidden; 
 }
 
 .app-main-layout {
-  @apply w-full h-full flex flex-col items-center justify-center;
+  @apply w-screen flex flex-col items-center justify-center;
 }
 /* --- CLASE GENÉRICA PARA LAS VISTAS --- */
-.view-container {
+.view-container-fixed {
   @apply max-w-screen md:h-screen flex justify-center items-center;
+}
+.view-container-scroll {
+  @apply max-w-screen;
 }
 .animate-enter {
   animation: simple-fade-in 0.7s ease-in forwards;
 }
 
 .grid-container {
-  @apply grid p-3 gap-3 h-full;
+  @apply grid p-3 gap-3 h-full 
 /* celu 3x12 */
-  @apply grid-cols-3 
-  grid-rows-12;  
+  grid-cols-3 
+  grid-rows-12  
+  max-w-11/12
 /* tablet 12x12 */
-  @apply md:grid-cols-12 
+  md:grid-cols-12 
   md:grid-rows-12 
-  md:w-11/12; 
+  md:w-10/12 
 /* pc 9x12 */ 
-  @apply lg:grid-cols-12 
-  lg:grid-rows-9 ; 
+  lg:grid-cols-12 
+  lg:grid-rows-9 
+  lg:w-9/12 ; 
 
   @media (min-height: 800px) {
     @apply md:h-[95vh];
@@ -89,6 +90,24 @@
   hover:shadow-pinky-glow
   cursor-pointer
 }
-#pinky-text {
+
+
+.home-page-buttom{
+    @apply bg-pinky-pink/60 rounded-2xl
+    hover:bg-pinky-pink hover:text-pinky-main
+    text-pinky-base font-extrabold text-2xl uppercase font-mono
+    h-8 w-24
+    flex items-center justify-center cursor-pointer
+}
+
+.volver{
+    @apply flex flex-row top-0 z-10 gap-10 self-start items-center bg-pinky-card/50 w-full h-16 md:pl-15 pl-4
+}
+
+.volver > h1 {
+    @apply text-pinky-base font-bold tracking-[5px] text-4xl font-mono 
+}
+
+.pinky-text {
     @apply text-pinky-soft font-extrabold    
 }

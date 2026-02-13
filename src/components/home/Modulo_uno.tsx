@@ -3,7 +3,7 @@ import "./Modulo_uno.css"
 
 const Modulo_uno = () => {
 
-  const phrases = ["Clean Code", "Solid Logic", "Modern Tech"];
+  const phrases = ["Clean Code", "Strong Logic", "Modern Tech"];
   const [index, setIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,9 +18,8 @@ const Modulo_uno = () => {
     <div className="mod-1">
       <div className="text-hero">
         <h1>Full-Stack Developer</h1>
-        <span>Building digital experiences with
-          <p key={phrases[index]} id='colorfull-text'>{phrases[index]}</p>
-        </span>
+        <span>Building digital experiences with</span>
+        <p key={phrases[index]} id='colorfull-text'>{phrases[index]}</p>
       </div>
     </div>
   );

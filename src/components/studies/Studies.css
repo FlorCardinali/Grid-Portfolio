@@ -3,23 +3,44 @@
 
 
 .studies-container{
-    @apply flex flex-col self-start
+    @apply mx-auto bg-pinky-muted/10 grid
+    /* celular */
+    grid-cols-3
+    row-auto
+    /* tablet */
+    md:grid-cols-5
+    /* pc */
+    lg:grid-cols-5
+}
+
+.studies-container > h2{
+    @apply text-pinky-pink font-bold tracking-[5px] text-4xl font-mono 
+    /* celular */
+    col-start-1
+    col-span-3
+    row-start-1
+    row-span-1
+    /* tablet */
+    md:col-start-1
+    md:col-span-5
+    md:row-start-1
+    md:row-span-1
+    /* pc */
+    lg:col-start-1
+    lg:col-span-5
+    lg:row-start-1
+    lg:row-span-1
+}
+
+.studies-item{
+    @apply border-2 border-pinky-border-pink flex
+    text-pinky-base bg-pinky-card bg-clip-padding rounded-lg
+}
+
+.studies-item-text{
+    @apply flex flex-col gap-10 font-[Arial] 
 }
 
 
-.volver{
-    @apply flex flex-row top-0 z-10 gap-10 self-start items-center bg-pinky-card/50 w-full h-16
-}
 
-.volver > button {
-    @apply bg-pinky-pink/60 rounded-2xl
-    hover:bg-pinky-pink hover:text-pinky-main
-    text-pinky-base font-extrabold text-2xl uppercase font-mono
-    h-8 w-24
-    flex items-center justify-center 
-}
-
-.volver > span {
-    @apply text-pinky-base font-bold tracking-[5px] text-4xl font-mono 
-}
 

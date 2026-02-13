@@ -63,11 +63,11 @@
   @apply z-20 px-6 w-full max-h-30 min-h-30 flex flex-col justify-center gap-1 transition-opacity duration-300;
 }
 
-.slide-content h3 {
+.slide-content p:first-child {
   @apply block text-2xl font-bold text-pinky-soft/90 drop-shadow-md bottom-18;
 }
 
-.slide-content p {
+.slide-content p:nth-child(2) {
   @apply text-pinky-muted text-sm font-medium max-w-[90%] drop-shadow-sm top-3;
 }
 

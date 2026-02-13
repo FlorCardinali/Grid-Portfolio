@@ -2,22 +2,11 @@
 @import "../../App.css";
 
 #about{
-    @apply  self-start flex flex-col justify-center items-center gap-5 pb-5 max-w-11/12 font-[Arial]
-}
-.volver{
-    @apply sticky flex flex-row top-0 z-10 gap-10 self-start items-center bg-pinky-card/50 w-full h-16
+    @apply  flex flex-col items-center gap-5 pb-5 max-w-screen font-[Arial] 
 }
 
-.volver > button {
-    @apply bg-pinky-pink/60 rounded-2xl
-    hover:bg-pinky-pink hover:text-pinky-main
-    text-pinky-base font-extrabold text-2xl uppercase font-mono
-    h-8 w-24
-    flex items-center justify-center 
-}
-
-.volver > span {
-    @apply text-pinky-base flex items-center font-bold tracking-[5px] text-4xl font-mono justify-center
+.point{
+    @apply text-pinky-muted/40 font-bold
 }
 
 .about-grid-layout {
@@ -27,17 +16,18 @@
     grid-cols-3
     pb-5
     /* tablet 9 */
-    md:grid-cols-9
-    md:w-[95vw]
+    md:grid-cols-5
+    md:w-11/12
     md:p-5
     /* pc 12 */
-    lg:grid-cols-12
-    lg:w-9/12
+    lg:grid-cols-5
+    lg:w-7/12
+    lg:p-10
     ;
 }
 
 .about-text{
-    @apply flex flex-col gap-10 font-[Arial]
+    @apply flex flex-col gap-10 font-[Arial] justify-center items-center
     /* celu 3*/
     col-start-1
     col-span-3
@@ -46,18 +36,16 @@
     text-4xl
     /* tablet 9 */
     md:col-start-1
-    md:col-span-5
+    md:col-span-3
     md:row-start-2
     md:row-span-1
     md:px-8
     /* pc 12 */
-    lg:col-span-7
-    lg:px-0
-    lg:pl-10
+    lg:px-15
 }
 
 .about-subtitle{
-    @apply text-pinky-pink uppercase font-bold tracking-[10px]
+    @apply text-pinky-pink uppercase font-bold tracking-[10px] lg:self-end
     /* celu 3x12 */
     text-2xl
     text-center
@@ -90,17 +78,23 @@
     w-full
     min-h-100
     /*tablet 9 */
-    md:col-start-6
-    md:col-span-4
+    md:col-start-4
+    md:col-span-2
     md:row-start-2
     md:row-span-1
     md:w-auto
     md:rounded-2xl
+    md:max-h-120
     /* pc 12 */
-    lg:col-start-9
-    lg:col-span-4
+    lg:col-start-4
+    lg:col-span-2
     lg:row-start-2
     lg:row-span-1
+    
+}
+
+.skill{
+    @apply md:pl-5
 }
 
 .skill-title{
@@ -114,15 +108,13 @@
     pt-10
     /* tablet */
     md:col-start-1
-    md:col-span-10
+    md:col-span-5
     md:row-start-3
     md:row-span-1
     md:text-2xl
     md:text-center
     md:pb-12
     /* pc */
-    lg:col-start-2
-    lg:col-span-10
 }
 
 
@@ -138,6 +130,7 @@
 }
 .skill > p {
     @apply text-pinky-muted text-lg font-[Arial] px-10 text-justify
+    md:text-left   md:pl-0
 }
 .skill-one{
     @apply 
@@ -149,12 +142,12 @@
     text-lg
     /* tablet */
     md:col-start-1
-    md:col-span-10
+    md:col-span-5
     md:row-start-4
     md:row-span-1
     /* pc */
-    lg:col-start-2
-    lg:col-span-10
+    lg:col-start-1
+    lg:col-span-5
 }
 .skill-two{
     @apply col-start-1
@@ -164,12 +157,12 @@
     text-lg
     /* tablet */
     md:col-start-1
-    md:col-span-10
+    md:col-span-5
     md:row-start-5
     md:row-span-1
     /* pc */
-    lg:col-start-2
-    lg:col-span-10
+    lg:col-start-1
+    lg:col-span-5
 }
 .skill-three{
     @apply col-start-1
@@ -179,12 +172,12 @@
     text-lg
     /* tablet */
     md:col-start-1
-    md:col-span-10
+    md:col-span-5
     md:row-start-6
     md:row-span-1
     /* pc */
-    lg:col-start-2
-    lg:col-span-10
+    lg:col-start-1
+    lg:col-span-5
 }
 .skill-four{
     @apply col-start-1
@@ -194,12 +187,12 @@
     text-lg
     /* tablet */
     md:col-start-1
-    md:col-span-10
+    md:col-span-5
     md:row-start-7
     md:row-span-1
     /* pc */
-    lg:col-start-2
-    lg:col-span-10
+    lg:col-start-1
+    lg:col-span-5
 }
 .skill-five{
     @apply 
@@ -210,10 +203,10 @@
     text-lg
     /* tablet */
     md:col-start-1
-    md:col-span-10
+    md:col-span-5
     md:row-start-8
     md:row-span-1
     /* pc */
-    lg:col-start-2
-    lg:col-span-10
+    lg:col-start-1
+    lg:col-span-5
 }   

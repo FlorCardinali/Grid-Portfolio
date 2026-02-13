@@ -39,7 +39,7 @@ function App() {
 
       {/* VISTA HOME (GRID) */}
       {view === 'home' && (
-        <div className="view-container animate-enter">
+        <div className="view-container-fixed animate-enter">
           <main className="grid-container">
             <Modulo_uno />
             <Modulo_dos onClick={() => setView('about')} />
@@ -56,13 +56,13 @@ function App() {
       )}
       {/* VISTA ABOUT ME */}
       {view === 'about' && (
-        <div className="view-container animate-enter">
+        <div className="view-container-scroll animate-enter">
           {/* Pasamos función para volver */}
           <AboutView onBack={() => setView('home')} />
         </div>
       )}
       {view === 'studies' && (
-        <div className="view-container animate-enter">
+        <div className="animate-enter">
           {/* Pasamos función para volver */}
           <Studies onBack={() => setView('home')} />
         </div>
