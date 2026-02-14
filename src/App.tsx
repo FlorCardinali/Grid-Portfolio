@@ -62,7 +62,7 @@ function App() {
         </div>
       )}
       {view === 'studies' && (
-        <div className="animate-enter">
+        <div className="view-container-scroll animate-enter">
           {/* Pasamos función para volver */}
           <Studies onBack={() => setView('home')} />
         </div>

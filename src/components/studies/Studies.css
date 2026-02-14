@@ -2,45 +2,136 @@
 @import "../../App.css";
 
 
-.studies-container{
-    @apply mx-auto bg-pinky-muted/10 grid
-    /* celular */
-    grid-cols-3
-    row-auto
-    /* tablet */
-    md:grid-cols-5
-    /* pc */
-    lg:grid-cols-5
+.studies {
+    @apply w-[99vw] relative min-h-screen flex flex-col items-center overflow-hidden;
+}
+.aurora-container {
+    @apply absolute inset-0 w-full h-full pointer-events-none -z-10;
 }
 
-.studies-container > h2{
-    @apply text-pinky-pink font-bold tracking-[5px] text-4xl font-mono 
-    /* celular */
-    col-start-1
-    col-span-3
-    row-start-1
-    row-span-1
-    /* tablet */
-    md:col-start-1
-    md:col-span-5
-    md:row-start-1
-    md:row-span-1
-    /* pc */
-    lg:col-start-1
-    lg:col-span-5
-    lg:row-start-1
-    lg:row-span-1
+/* Estilo base de todas las manchas */
+.aurora-blob {
+    @apply absolute rounded-full opacity-30 mix-blend-screen filter blur-[80px];
+    /* blur-80px es lo que le da el efecto "gas" o aurora */
 }
 
-.studies-item{
-    @apply border-2 border-pinky-border-pink flex
-    text-pinky-base bg-pinky-card bg-clip-padding rounded-lg
+/* --- MANCHA 1: Rosa Suave (Arriba Izquierda -> Centro) --- */
+.aurora-1 {
+    @apply bg-pinky-soft w-[500px] h-[500px] top-[-100px] left-[-100px] -z-20;
+    animation: float-1 15s infinite alternate ease-in-out;
 }
 
-.studies-item-text{
-    @apply flex flex-col gap-10 font-[Arial] 
+/* --- MANCHA 2: Violeta/Rosado (Abajo Derecha -> Arriba) --- */
+.aurora-2 {
+    @apply bg-pinky-pink w-[400px] h-[400px] bottom-0 right-0 -z-20;
+    animation: float-2 18s infinite alternate-reverse ease-in-out;
+    opacity: 0.25; /* Un poco más sutil */
+}
+
+/* --- MANCHA 3: Acento Brillante (Centro -> Lados) --- */
+.aurora-3 {
+    /* Usamos un color hardcodeado o una variable si tenés un violeta definido */
+    background-color: #a855f7; 
+    @apply w-[300px] h-[300px] top-[40%] left-[30%] -z-20;
+    animation: float-3 20s infinite alternate ease-in-out;
+    opacity: 0.2;
+}
+
+/* --- ANIMACIONES DE VIAJE --- */
+
+@keyframes float-1 {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(50vw, 20vh) scale(1.2); }
+    66% { transform: translate(20vw, 60vh) scale(0.8); }
+    100% { transform: translate(80vw, 10vh) scale(1.1); }
+}
+
+@keyframes float-2 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-40vw, -40vh) rotate(180deg); }
+    100% { transform: translate(-80vw, 10vh) rotate(360deg); }
+}
+
+@keyframes float-3 {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(40vw, -30vh) scale(1.5); }
+    100% { transform: translate(-20vw, 40vh) scale(0.9); }
+}
+
+/* --- AJUSTE DE CAPAS --- */
+/* Importante: Hacemos que el contenido pase al frente */
+.timeline-container, .volver, .studies-title, .timeline-item, .timeline-dot, .study-card, .course-card, .university-title, .university-name, .university-date, .status-tag, .university-description, .course-description {
+    @apply relative z-20; 
+}
+
+.studies-title {
+    @apply text-pinky-pink text-3xl font-bold uppercase 
+    tracking-[5px] my-12 ;
+}
+
+.timeline-container {
+    @apply relative w-full max-w-5xl flex flex-col gap-10 px-5;
+}
+
+.timeline-line {
+    @apply absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-pinky-soft/20;
+}
+
+.timeline-item {
+    @apply relative w-full flex justify-center items-center;
+}
+
+/* El punto de conexión */
+.timeline-dot {
+    @apply absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-pinky-soft rounded-full shadow-pinky-glow z-10;
+}
+
+/* Tarjetas (Ramas) */
+.study-card {
+    @apply w-[45%] bg-pinky-card border-2 border-pinky-border-pink p-10 rounded-2xl relative flex flex-col gap-2 backdrop-blur-3xl;
+}
+
+.study-card.course-card {
+    @apply bg-pinky-border-hover z-40
 }
 
 
+.university-title {
+    @apply text-pinky-pink/70 font-bold text-xl;
+}
 
 
+.university-name {
+    @apply text-pinky-base font-semibold text-sm opacity-90;
+}
+
+.university-date {
+    @apply text-pinky-muted text-xs font-mono;
+}
+
+.status-tag {
+    @apply text-[10px] uppercase font-bold tracking-wider text-pinky-pink bg-pinky-pink/30 px-3 py-1 rounded-xl w-fit;
+}
+
+.university-description {
+    @apply text-pinky-muted text-sm leading-relaxed mt-2   ;
+}
+.course-description{
+    @apply text-pinky-base text-sm leading-relaxed mt-2 ;
+}
+
+/* Posicionamiento Desktop */
+.branch-right { @apply justify-end; }
+.branch-left { @apply justify-start;}
+
+/* Media Query para Celulares */
+@media (max-width: 768px) {
+    .timeline-line { @apply left-4; }
+    .timeline-dot { @apply left-4; }
+    .timeline-item { @apply justify-start pl-10; }
+    .study-card { @apply w-[90%]; }
+    
+    .studies-title {
+        @apply text-xl text-left pl-4;
+    }
+}

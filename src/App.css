@@ -8,7 +8,7 @@
   --color-pinky-pink: #ecb5d4;
   --color-pinky-soft: #f472b6;
   --color-pinky-border-pink: rgba(251, 207, 232, 0.05);
-  --color-pinky-border-hover: rgba(99, 34, 67, 0.253);
+  --color-pinky-border-hover: #231420;
   --shadow-pinky-glow: 0 0 20px 5px rgba(251, 207, 232, 0.15);
   --shadow-pinky-strong: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(251, 207, 232, 0.05);
   @keyframes fade-slide {
@@ -44,18 +44,17 @@
 #root {
   box-sizing: border-box;
   background-color: #0d0f14 !important;
-  overflow-x: hidden; 
 }
 
 .app-main-layout {
-  @apply w-screen flex flex-col items-center justify-center;
+  @apply w-[97vw] flex flex-col items-center justify-center p-0 m-0;
 }
 /* --- CLASE GENÉRICA PARA LAS VISTAS --- */
 .view-container-fixed {
-  @apply max-w-screen md:h-screen flex justify-center items-center;
+  @apply max-w-[99vw] md:h-screen flex justify-center items-center;
 }
 .view-container-scroll {
-  @apply max-w-screen;
+  @apply max-w-[99vw] m-0 p-0
 }
 .animate-enter {
   animation: simple-fade-in 0.7s ease-in forwards;
@@ -93,19 +92,19 @@
 
 
 .home-page-buttom{
-    @apply bg-pinky-pink/60 rounded-2xl
-    hover:bg-pinky-pink hover:text-pinky-main
+    @apply bg-pinky-main rounded-xl border-2 border-pinky-soft
+    hover:bg-pinky-pink hover:text-pinky-main hover:border-pinky-pink hover:shadow-pinky-glow
     text-pinky-base font-extrabold text-2xl uppercase font-mono
     h-8 w-24
     flex items-center justify-center cursor-pointer
 }
 
 .volver{
-    @apply flex flex-row top-0 z-10 gap-10 self-start items-center bg-pinky-card/50 w-full h-16 md:pl-15 pl-4
+    @apply flex flex-row top-0 z-10 gap-10 self-start items-center  w-full h-16 md:pl-15 pl-4 
 }
 
 .volver > h1 {
-    @apply text-pinky-base font-bold tracking-[5px] text-4xl font-mono 
+    @apply font-bold  text-2xl text-transparent bg-clip-text bg-linear-to-r from-pinky-pink to-pinky-soft
 }
 
 .pinky-text {
