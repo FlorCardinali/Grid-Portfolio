@@ -47,7 +47,7 @@
 }
 
 .app-main-layout {
-  @apply w-[97vw] flex flex-col items-center justify-center p-0 m-0;
+  @apply w-full flex flex-col items-center justify-center p-0 m-0;
 }
 /* --- CLASE GENÉRICA PARA LAS VISTAS --- */
 .view-container-fixed {
@@ -100,11 +100,17 @@
 }
 
 .volver{
-    @apply flex flex-row top-0 z-10 gap-10 self-start items-center  w-full h-16 md:pl-15 pl-4 
+    @apply sticky flex flex-row top-0 z-10 gap-10 self-start items-center w-full h-16 md:pl-15 pl-4 bg-linear-to-r from-pinky-pink/20 to-40% to-transparent
 }
 
 .volver > h1 {
-    @apply font-bold  text-2xl text-transparent bg-clip-text bg-linear-to-r from-pinky-pink to-pinky-soft
+    @apply font-bold  text-2xl text-transparent bg-linear-to-r from-pinky-pink to-pinky-soft;
+    background-clip: text;
+    -webkit-background-clip: text; 
+    /* PARA SAFARI/CHROME */ 
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+        color: transparent;
+    }
 }
 
 .pinky-text {

@@ -1,5 +1,6 @@
 import React from 'react';
 import "./AboutView.css";
+import Aurora from "../Aurora.tsx";
 interface AboutViewProps {
   onBack: () => void;
 }
@@ -16,6 +17,7 @@ const AboutView: React.FC<AboutViewProps> = ({ onBack }) => {
         </button>
         <h1>Info</h1>
       </nav>
+      <Aurora />
 
       <div className="about-grid-layout">
         <div className='about-text'>

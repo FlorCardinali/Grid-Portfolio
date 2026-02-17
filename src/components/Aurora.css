@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "../App.css";
+
+.aurora-blob {
+    @apply absolute rounded-full opacity-30 mix-blend-screen;
+    filter: blur(80px);
+    -webkit-filter: blur(80px);
+}
+.aurora-container {
+    @apply absolute inset-0 w-full h-full pointer-events-none -z-10;
+}
+
+.aurora-1 {
+    @apply bg-pink-300/30 w-[500px] h-[500px] top-[-100px] left-[-100px] -z-20;
+    animation: float-1 7s infinite alternate ease-in-out;
+}
+
+.aurora-2 {
+    @apply bg-pinky-pink w-[400px] h-[400px] bottom-0 right-0 -z-20;
+    animation: float-2 7s infinite alternate-reverse ease-in-out;
+    opacity: 0.25;
+}
+
+.aurora-3 {
+    @apply bg-pink-200 w-[300px] h-[300px] top-[40%] left-[30%] -z-20;
+    animation: float-3 7s infinite alternate ease-in-out;
+    opacity: 0.2;
+}
+
+@keyframes float-1 {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(50vw, 20vh) scale(0.5); }
+    66% { transform: translate(20vw, 60vh) scale(0.8); }
+    100% { transform: translate(80vw, 10vh) scale(1.1); }
+}
+
+@keyframes float-2 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-40vw, -40vh) rotate(180deg); }
+    100% { transform: translate(-80vw, 10vh) rotate(360deg); }
+}
+
+@keyframes float-3 {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(40vw, -30vh) scale(1.5); }
+    100% { transform: translate(-20vw, 40vh) scale(0.9); }
+}
